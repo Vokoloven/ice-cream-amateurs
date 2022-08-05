@@ -2,27 +2,60 @@
   padding-top: 64px;
   padding-bottom: 60px;
 
+  background-image: linear-gradient(
+    to bottom,
+    $colorBackgroundTertiary 55.65%,
+    $colorBackgroundQuaternary 44.35%
+  );
+
   > .container {
-    height: 327px;
+    padding: 0;
   }
 }
 
 .gallery__list {
   display: flex;
+  justify-content: center;
+  align-items: center;
+  // width: calc((100% - 5 * 5.23px) / 6);
 
-  gap: 2.53px;
+  gap: 2.5px;
 
   @include tablet {
-    gap: 6.86px 6.07px;
+    gap: 6px;
   }
 
   @include desktop {
-    gap: 7.98px 8px;
+    gap: 8px;
   }
 }
 
 .gallery__items {
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 2.5px;
+
+  @include tablet {
+    gap: 6px;
+  }
+
+  @include desktop {
+    gap: 8px;
+  }
+}
+
+.gallery__items--second {
+  margin-top: 28px;
+}
+
+.gallery__items--fourth {
+  margin-top: 31px;
+}
+
+.gallery__items--fifth {
+  margin-top: 21px;
+}
+
+.gallery__items--sixth {
+  margin-top: 21px;
 }
