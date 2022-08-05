@@ -34,6 +34,13 @@
                 display: flex;
                 justify-content: center;
                 align-items: center;
+                width: 160px;
+                height: 44px;
+                @include fonts ($fw: 700, $fs: 16px, $lh: 21px);
+                color: $colorFontTertiary;
+                border: none;
+                background-color: $colorFontSecondary;
+                border-radius: 22px;
                 margin-left: 32px;
                 transition: 250ms;
                 transition-timing-function: ease-in-out;
@@ -47,14 +54,7 @@
             @include desktop {
                 margin-left: auto;
             }
-            
-            width: 160px;
-            height: 44px;
-            @include fonts ($fw: 700, $fs: 16px, $lh: 21px);
-            color: $colorFontTertiary;
-            border: none;
-            background: $colorFontSecondary;
-            border-radius: 22px;
+
         }
         &__btn-icon {
             display: block;
