@@ -23,15 +23,78 @@
         }
     }    
     &__button {
+        transition: 1500ms;
+        z-index: 11;
+        height: max-content;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        margin-top: auto;
+        margin-bottom: auto;
         border: none;
         background-color: transparent;
         margin-left: auto;
         display: flex;
         justify-content: center;
         align-items: center;
+        cursor: pointer;
         @include desktop {
             display: none;
         }
     }
     
 }
+
+.icon__close {
+    display: none;
+    transition: 1250ms;
+}
+
+.menu__button.is-open .icon__close {
+    display: block;
+    transition: 1250ms;
+}
+
+.menu__button.is-open .icon__menu {
+    display: none;
+    transition: 1250ms;
+}
+
+.menu__container {
+    display: flex;
+    height: 502px;
+    width: 320px;
+    padding: 20px;
+    z-index: 10;
+    position: absolute;
+    right: 0;
+    top: 0;
+    overflow: hidden;
+    opacity: 0;
+    transform: translateX(100%);
+    content: "";
+    transition: 250ms;
+    // display: none;
+    background-color: grey;
+    &.is-open {
+        opacity: 1;
+        transform: translateX(0);
+        display: flex;
+        height: 502px;
+        background-color: rgba(0, 0, 0, 0.411);
+    }
+}
+// .menu__container {
+//     padding: 20px;
+//     z-index: 10;
+//     position: absolute;
+//     right: 0;
+//     content: "";
+//     display: none;
+//     background-color: grey;
+//     &.is-open {
+//         display: flex;
+//         min-width: 320px;
+//         height: 100%;
+//         background-color: rgba(0, 0, 0, 0.411);
+//     }
+// }
