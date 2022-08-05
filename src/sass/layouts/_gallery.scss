@@ -1,4 +1,28 @@
+.gallery--property {
+  padding-top: 64px;
+  padding-bottom: 60px;
+
+  > .container {
+    height: 327px;
+  }
+}
+
 .gallery__list {
   display: flex;
-  gap: 6.07px 10px;
+
+  gap: 2.53px;
+
+  @include tablet {
+    gap: 6.86px 6.07px;
+  }
+
+  @include desktop {
+    gap: 7.98px 8px;
+  }
+}
+
+.gallery__items {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
 }
