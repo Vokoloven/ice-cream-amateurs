@@ -1,0 +1,53 @@
+.footer {
+    background-color: $colorBackgroundTertiary;
+}
+
+.footer__title {
+    @include fonts ('Titan One', normal, 400, 18px, 21px, 0.04em);
+
+    text-transform: uppercase;
+
+    color: #FFA5BA;
+}
+
+.footer__title span {
+    @include fonts ('Titan One', normal, 400, 34px, 39px, 0.04em);
+   
+    text-transform: uppercase;
+
+    color: $colorFontTertiary;
+}
+
+.footer__soc-net-list {
+    list-style: none;
+    padding: 0;
+}
+
+.footer__tel {
+    @include fonts ('DM Sans', normal, 700, 12px, 22px, 0.04em);   
+
+    color: $colorFontPrimary;
+
+    padding-bottom: 40px;
+}
+
+.footer__tel-number {
+    @include fonts ('DM Sans', normal, 700, 12px, 22px, 0.04em);
+
+    color: $colorFontTertiary;
+
+    padding-bottom: 40px;
+}
+
+.footer__rights {
+    @include fonts ('DM Sans', normal, 700, 14px, 21px, 0.04em);
+
+    text-align: center;
+
+    color: $colorFontQuaternary;
+
+    padding-top: 16px;
+    border-top: 1px solid #E1E1E1;
+}
+
+
