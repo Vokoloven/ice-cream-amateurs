@@ -55,13 +55,10 @@ footer::before {
     margin-right: 28px;
 }
 
-.footer__icon-soc-net {
-    border-radius: 50%;
-
-    fill: $colorFontSecondary;
-    background-color: #FEA5BB;
+.footer__icon-soc-net {   
+    fill: #FEA5BB;   
     &:hover, &:focus {
-    background-color: $colorButtonBackgroundSecondary;
+    fill: $colorButtonBackgroundSecondary;
     }
 }
 
