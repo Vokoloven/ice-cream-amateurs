@@ -19,11 +19,20 @@
     @include tablet {
         background-image:url(../images/hero-header/hero-pic-320-2x-min.png),
         url(../images/hero-header/baby-768-2x-min.png),
-         url(../images/hero-header/Ellipse.png);
-        background-size: 143px 336px, 190px 150px, 344px;
-        background-position: 322 80, 526 265, 248 43;        
+        url(../images/hero-header/milk-768-2x-min.png),
+        url(../images/hero-header/Ellipse.png);
+        background-size: 143px 336px, 190px 150px, 152px 154px, 344px;
+        background-position: 322 80, 526 265, 32 246, 248 43;        
         height: 416px;
-        
+    }
+    @include desktop {
+        background-image:url(../images/hero-header/hero-1200-2x-min.png),
+        url(../images/hero-header/baby-1200-2x-min.png),
+        url(../images/hero-header/milk-1200-2x-min.png),
+        url(../images/hero-header/Ellipse.png);
+        background-size: 236px 557px, 304px 241px, 213px 215px, 534px;
+        background-position: 636 108, 880 423, 16 388, 517 54;        
+        height: 664px;
     }
     background-image: linear-gradient(to right, FFA5BA, FFA5BA);
     background-color: $colorBackgroundPrimary;
@@ -101,12 +110,19 @@
     @include mobile {
         margin-top: 16px;
     }
+    @include desktop {
+        margin-top: 60px;
+    }
     &__box-left {
+        position: relative;
         @include mobile {
             margin-top: 120px;
         }
         @include tablet {
             margin-top: 10px;
+        }
+        @include desktop {
+            margin-top: 0px;
         }
     }
      
@@ -131,6 +147,9 @@
             color: $colorFontTertiary;
             @include tablet {
                 @include fonts ($ff: 'Titan One', $ffs: normal, $fw: 400, $fs: 34px, $lh: 46px);    
+            }
+            @include desktop {
+                @include fonts ($ff: 'Titan One', $ffs: normal, $fw: 400, $fs: 58px, $lh: 46px);    
             }
         }
     }
@@ -179,6 +198,26 @@
         }
     }
 
+    &__text {
+        display: none;
+        @include tablet {
+            display: block;
+            @include fonts ($fw: 400, $fs: 8px, $lh: 10px);      
+            color: $colorFontSecondary;  
+            margin-top: 61px;
+            margin-left: 152px;
+            width: 114px;
+        }
+        @include desktop {
+            display: block;
+            @include fonts ($fw: 400, $fs: 14px, $lh: 14px);      
+            color: $colorFontSecondary;  
+            margin-top: 108px;
+            margin-left: 181px;
+            width: 200px;
+        }
+    }
+
     &__listbox {
         padding-right: 10px;
         display: none;
@@ -216,6 +255,48 @@
     &__info {
         @include fonts ($fw: 400, $fs: 8px, $lh: 10px);
         color: $colorFontSecondary;
+    }
+
+    &__circle-right {
+        display: none;
+        @include tablet {
+            cursor: pointer;
+            display: flex;
+            position: relative;
+            width: 18px;
+            height: 18px;
+            background-color: $colorFontSecondary;
+            border-radius: 50%;
+            margin-left: 152px;
+            margin-top: 7px;
+            color: $colorFontTertiary;
+        }
+        @include desktop {
+            margin-left: 181px;
+            margin-top: 20px;
+            width: 26px;
+            height: 26px;
+        }
+        &:hover,
+        &:focus {
+            background-color: $colorFontTertiary;
+            color: $colorFontSecondary;
+        }
+    }
+    &__arrow-right {
+        display: none;
+        @include tablet {
+            display: block;
+            position: relative;
+            transform-origin: 100%;
+            transform: scale(-1, 1);
+            fill: currentColor;
+            width: 6px;
+        }
+        @include desktop {
+            width: 8px;
+            transform-origin: 105%;
+        }
     }
 }
 
