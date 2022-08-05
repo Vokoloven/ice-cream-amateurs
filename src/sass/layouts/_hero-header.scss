@@ -1,16 +1,14 @@
 //   header
 .header {
     height: 502px;
-    // background-image: linear-gradient(to right, FFA5BA, FFA5BA),
-    // url(../images/hero-header/hero-pic-320-2x-min.png);
-    // background-size: 171px 410px;
-    // background-repeat: no-repeat;
-    // background-position: 117 92;
     background-image:url(../images/hero-header/hero-pic-320-2x-min.png),
      url(../images/hero-header/Ellipse.png);
     background-size: 171px 410px, 344px;
     background-repeat: no-repeat;
     background-position: 117 93, 36 83;
+    @include mobile {
+        background-position: 147 93, 66 83;
+    }
     background-image: linear-gradient(to right, FFA5BA, FFA5BA);
     background-color: $colorBackgroundPrimary;
     &-top {
@@ -159,6 +157,7 @@
 
     &__listbox {
         display: none;
+        transition: 250ms;
         @include mobile {
             display: block;
         }
