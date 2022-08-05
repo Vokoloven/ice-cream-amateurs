@@ -1,3 +1,67 @@
+.about {
+    background-color: #FFF5F6;
+}
 .about__label{
+    @include fonts($ff: 'Titan One', $fw: 400, $fs: 18px, $lh: 21px);
+    text-align: center;
+    text-transform: uppercase;
+    color: #FFA5BA;
+
+    @include tablet{
+    @include fonts($ff: 'Titan One', $fw: 400, $fs: 26px, $lh: 30px);
+    
+}
+
+    @include desktop{
     @include fonts($ff: 'Titan One', $fw: 400, $fs: 30px, $lh: 34px);
+    }
+}
+ 
+.about__title{ 
+    @include fonts($ff: 'Titan One', $fw: 400, $fs: 34px, $lh: 39px);
+    text-align: center;
+    text-transform: uppercase;
+    color: #D41443;
+
+
+    @include tablet {
+    @include fonts($ff: 'Titan One', $fw: 400, $fs: 48px, $lh: 55px);
+    }
+
+    @include desktop {
+    @include fonts($ff: 'Titan One', $fw: 400, $fs: 58px, $lh: 66px);
+  }
+}
+.about-text__one {
+    @include fonts($fs: 12px, $lh: 19px);
+    color: #000000;
+
+    @include tablet {
+            @include fonts($fs: 14px, $lh: 25px);     
+        }
+
+    @include desktop {
+                     @include fonts($fs: 16px, $lh: 28px);
+                 }
+
+}
+
+.about-text__two {
+    color: #907E82;
+    @include fonts($fs:12px, $lh: 19px);
+   
+    @include tablet {
+            @include fonts($fs: 14px, $lh: 25px);
+        }
+
+            @include desktop {
+                    @include fonts($fs: 14px, $lh: 27px)}  }
+
+.about__btn {
+    @include fonts($fw: 700, $fs: 16px, $lh: 21px);
+        display: flex;
+        align-items: center;
+        text-align: center;
+        color: #D41443;
+        background-color: #ffffff;
 }
