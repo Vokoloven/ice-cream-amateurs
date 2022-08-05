@@ -1,5 +1,11 @@
 //   header
 .header {
+    &__container {
+        @include tablet {
+            padding-left: 32px;
+            padding-right: 32px;
+        }
+    }
     height: 502px;
     background-image:url(../images/hero-header/hero-pic-320-2x-min.png),
      url(../images/hero-header/Ellipse.png);
@@ -7,7 +13,17 @@
     background-repeat: no-repeat;
     background-position: 117 93, 36 83;
     @include mobile {
+        background-size: 171px 410px, 344px;
         background-position: 147 93, 66 83;
+    }
+    @include tablet {
+        background-image:url(../images/hero-header/hero-pic-320-2x-min.png),
+        url(../images/hero-header/baby-768-2x-min.png),
+         url(../images/hero-header/Ellipse.png);
+        background-size: 143px 336px, 190px 150px, 344px;
+        background-position: 322 80, 526 265, 248 43;        
+        height: 416px;
+        
     }
     background-image: linear-gradient(to right, FFA5BA, FFA5BA);
     background-color: $colorBackgroundPrimary;
@@ -89,7 +105,11 @@
         @include mobile {
             margin-top: 120px;
         }
+        @include tablet {
+            margin-top: 10px;
+        }
     }
+     
     &__title {
         @include fonts ($ff: 'Titan One', $ffs: normal, $fw: 400, $fs: 26px, $lh: 30px);
         margin-right: auto;
@@ -99,6 +119,7 @@
         width: 218px;
         @include tablet {
             @include fonts ($ff: 'Titan One', $ffs: normal, $fw: 400, $fs: 22px, $lh: 25px);
+            width: 162px;
         }
         @include desktop {
             @include fonts ($ff: 'Titan One', $ffs: normal, $fw: 400, $fs: 38px, $lh: 44px);
@@ -108,6 +129,9 @@
         &--heavy {
             @include fonts ($ff: 'Titan One', $ffs: normal, $fw: 400, $fs: 48px, $lh: 46px);
             color: $colorFontTertiary;
+            @include tablet {
+                @include fonts ($ff: 'Titan One', $ffs: normal, $fw: 400, $fs: 34px, $lh: 46px);    
+            }
         }
     }
     &__list {
@@ -156,6 +180,7 @@
     }
 
     &__listbox {
+        padding-right: 10px;
         display: none;
         transition: 250ms;
         @include mobile {
