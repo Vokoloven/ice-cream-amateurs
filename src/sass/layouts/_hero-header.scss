@@ -36,16 +36,18 @@
                 align-items: center;
                 margin-left: 32px;
                 transition: 250ms;
-
+                transition-timing-function: ease-in-out;
                 &:hover,
                 &:focus {
                     background-color: $colorFontTertiary;
                     color: $colorFontSecondary;
                 }
             }
+
             @include desktop {
                 margin-left: auto;
             }
+            
             width: 160px;
             height: 44px;
             @include fonts ($fw: 700, $fs: 16px, $lh: 21px);

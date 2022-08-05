@@ -40,3 +40,9 @@
   line-height: $lh / $fs;
   letter-spacing: $ls;
 }
+
+@mixin transition($tp: background-color, $td: 250ms, $tf: ease-in-out) {
+  transition-property: $tp;
+  transition-delay: $td;
+  transition-timing-function: $tf;
+}
