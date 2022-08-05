@@ -1,4 +1,4 @@
-<header class="header container" id="header">
+<header class="header container header__container" id="header">
     <div class="header-top">
         <img src="./images/hero-header/Logo.svg" alt="logo" class="header-top__logo">
         <nav class="menu-header">
@@ -20,6 +20,27 @@
                 </li>
             </ul>
         </nav>
-        <img src="./images/hero-header/menu-open.svg" alt="menu-open" class="header-top__menu-open">
+        <a class="menu-header__button">            
+            <svg class="header-top__menu-open">
+                <use href="./images/hero-header/symbol-defs.svg#icon-menu-open"></use>
+            </svg>    
+        </a>
+        <button class="header-top__button" type="button">
+            Buy now
+            <svg class="header-top__btn-icon" width="8px" height="10px">
+                <use href="./images/hero-header/symbol-defs.svg#icon-btn-arrow" class="header-top__btn-icon" ></use>
+            </svg>
+        </button>
     </div>
+    <section class="hero">
+        <h1 class="hero__title">ice cream made with <span class="hero__title--heavy">passion</span></h1>
+        <ul class="hero__list">
+            <li class="hero__item">
+                <a href="#products" class="hero__link hero__link--first">Products</a>
+            </li>
+            <li class="hero__item">
+                <a href="#advantages" class="hero__link hero__link--last">How it’s made?</a>
+            </li>
+        </ul>
+    </section>
 </header>

@@ -10,7 +10,24 @@
         }
     }    
     &__link {
-        @include fonts ($fw: 700, $fs: 16px, $lh: 20px, );
+        @include fonts ($fw: 700, $fs: 16px, $lh: 20px);
+        color: $colorFontSecondary;
+        margin-left: 35px;
+        text-decoration: none;
+        transition: 250ms;
+
+        &:hover,
+        &:focus {
+            color: $colorFontTertiary;
+        }
     }    
+    &__button {
+        border: none;
+        background-color: transparent;
+        margin-left: auto;
+        @include desktop {
+            display: none;
+        }
+    }
     
 }

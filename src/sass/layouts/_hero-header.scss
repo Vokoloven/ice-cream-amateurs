@@ -1,13 +1,135 @@
+//   header
 .header {
+    background-color: $colorBackgroundPrimary;
     &-top {
+        margin-bottom: 136px;
         display: flex;
         padding-top: 8px;
+        @include tablet {
+            padding-top: 32px;
+        }
+        @include desktop {
+            padding-top: 37px;
+        }
         &__logo {
             width: 199px;
             height: 50px;
         }
         &__menu-open {
             margin-left: auto;
+            color: $colorFontTertiary;
+            width: 20px;
+            height: 12px;
+            transition: 250ms;
+
+            &:hover,
+            &:focus {
+                color: $colorFontSecondary;
+            }
+        }
+        &__button {
+            position: relative;
+            display: none;
+            @include tablet {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                margin-left: 32px;
+                transition: 250ms;
+
+                &:hover,
+                &:focus {
+                    background-color: $colorFontTertiary;
+                    color: $colorFontSecondary;
+                }
+            }
+            @include desktop {
+                margin-left: auto;
+            }
+            width: 160px;
+            height: 44px;
+            @include fonts ($fw: 700, $fs: 16px, $lh: 21px);
+            color: $colorFontTertiary;
+            border: none;
+            background: $colorFontSecondary;
+            border-radius: 22px;
+        }
+        &__btn-icon {
+            display: block;
+            position: relative;
+            content: "";
+            top: 1px;
+            height: 10px;
+            margin-left: 10px;
+            fill: currentColor;
         }
     }
+}
+
+// hero
+
+.hero {
+    &__title {
+        @include fonts ($ff: 'Titan One', $ffs: normal, $fw: 400, $fs: 26px, $lh: 30px);
+        margin-right: auto;
+        margin-bottom: 20px;
+        color: $colorFontSecondary;
+        text-transform: uppercase;
+        @include tablet {
+            @include fonts ($ff: 'Titan One', $ffs: normal, $fw: 400, $fs: 22px, $lh: 25px);
+        }
+        @include desktop {
+            @include fonts ($ff: 'Titan One', $ffs: normal, $fw: 400, $fs: 38px, $lh: 44px);
+            margin-bottom: 24px;
+        }
+        &--heavy {
+            @include fonts ($ff: 'Titan One', $ffs: normal, $fw: 400, $fs: 48px, $lh: 46px);
+            color: $colorFontTertiary;
+        }
+    }
+    &__list {
+        display: flex;
+        list-style: none;
+    }
+    &__item {
+        display: flex;
+        background-color: $colorFontTertiary;
+        border-radius: 20px;
+
+        &:nth-child(1) {
+            margin-right: 8px;
+        }
+
+        &:hover,
+        &:focus {
+            background-color: $colorFontTertiary;
+        }
+    }
+    &__link {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-decoration: none;
+        border-radius: 20px;
+        @include fonts ($fw: 400, $fs: 8px, $lh: 10px);
+        color: $colorFontSecondary;
+        transition: 250ms;
+        
+        &--first {
+            width: 62.4px;
+            height: 24px;
+        }
+
+        &--last {
+            width: 82.8px;
+            height: 24px;
+        }
+
+        &:hover,
+        &:focus {
+            background-color: $colorFontSecondary;
+            color: $colorFontTertiary;
+        }
+    }
+
 }
