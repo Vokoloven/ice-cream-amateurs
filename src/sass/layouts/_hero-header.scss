@@ -1,8 +1,19 @@
 //   header
 .header {
+    height: 502px;
+    // background-image: linear-gradient(to right, FFA5BA, FFA5BA),
+    // url(../images/hero-header/hero-pic-320-2x-min.png);
+    // background-size: 171px 410px;
+    // background-repeat: no-repeat;
+    // background-position: 117 92;
+    background-image:url(../images/hero-header/hero-pic-320-2x-min.png),
+     url(../images/hero-header/Ellipse.png);
+    background-size: 171px 410px, 344px;
+    background-repeat: no-repeat;
+    background-position: 117 93, 36 83;
+    background-image: linear-gradient(to right, FFA5BA, FFA5BA);
     background-color: $colorBackgroundPrimary;
     &-top {
-        margin-bottom: 136px;
         display: flex;
         padding-top: 8px;
         @include tablet {
@@ -71,18 +82,30 @@
 // hero
 
 .hero {
+    display: flex;
+    margin-top: 136px;
+    @include mobile {
+        margin-top: 16px;
+    }
+    &__box-left {
+        @include mobile {
+            margin-top: 120px;
+        }
+    }
     &__title {
         @include fonts ($ff: 'Titan One', $ffs: normal, $fw: 400, $fs: 26px, $lh: 30px);
         margin-right: auto;
         margin-bottom: 20px;
         color: $colorFontSecondary;
         text-transform: uppercase;
+        width: 218px;
         @include tablet {
             @include fonts ($ff: 'Titan One', $ffs: normal, $fw: 400, $fs: 22px, $lh: 25px);
         }
         @include desktop {
             @include fonts ($ff: 'Titan One', $ffs: normal, $fw: 400, $fs: 38px, $lh: 44px);
             margin-bottom: 24px;
+            width: 277px;
         }
         &--heavy {
             @include fonts ($ff: 'Titan One', $ffs: normal, $fw: 400, $fs: 48px, $lh: 46px);
@@ -134,4 +157,41 @@
         }
     }
 
+    &__listbox {
+        display: none;
+        @include mobile {
+            display: block;
+        }
+        list-style: none;
+        margin-left: auto;
+    }
+
+    &__point {
+        text-align: end;
+    }
+
+    &__number {
+        position: relative;
+        z-index: 1;
+        @include fonts ($ff: 'Titan One', $ffs: normal, $fw: 400, $fs: 28px, $lh: 32px);
+        color: $colorFontTertiary;
+
+        &::after {
+            content: "";
+            position: absolute;
+            z-index: -1;
+            width: 16px;
+            height: 16px;
+            top: -2px;
+            right: -10px;
+            border-radius: 50%;
+            background-color: $colorFontSecondary;
+        }
+    }
+
+    &__info {
+        @include fonts ($fw: 400, $fs: 8px, $lh: 10px);
+        color: $colorFontSecondary;
+    }
 }
+

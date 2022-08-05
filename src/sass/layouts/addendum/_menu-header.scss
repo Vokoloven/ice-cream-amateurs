@@ -26,6 +26,9 @@
         border: none;
         background-color: transparent;
         margin-left: auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
         @include desktop {
             display: none;
         }
