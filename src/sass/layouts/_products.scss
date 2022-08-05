@@ -3,6 +3,16 @@
   padding-bottom: 60px;
   text-align: center;
 }
+.product-section {
+  @include tablet {
+    padding-left: 32px;
+    padding-right: 32px;
+  }
+  @include desktop {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+}
 .product__pre-title {
   @include fonts($ff: 'Titan One', $fw: 400, $fs: 18px, $lh: 20px);
   color: $colorFontQuinary;
@@ -29,7 +39,6 @@
 }
 .product-card__list {
   display: flex;
-  flex-wrap: wrap;
   justify-content: center;
   @include tablet {
     gap: 16px;
@@ -43,7 +52,7 @@
 // }
 .product-card__item {
   position: relative;
-  width: 280px;
+  // width: 280px;
   height: 489px;
   background-color: #ffb8ca;
   border-radius: 24px;
@@ -53,7 +62,7 @@
   margin-top: 199px;
 
   @include tablet {
-    width: calc((100% - 32px) / 3);
+    width: 224px;
     height: 473px;
 
     padding-top: 118px;
@@ -62,30 +71,44 @@
     margin-top: 158px;
   }
   @include desktop {
-    flex-basis: calc((100% - 64px) / 3);
+    width: 200px;
     height: 535px;
 
     padding-top: 165px;
     padding-left: 64px;
     padding-right: 64px;
-    margin-top: 148px;
+    margin-top: 281px;
   }
 }
-.product-card-first {
-  position: relative;
-  &::before {
-    position: absolute;
-    left: 0;
-    background-size: cover;
-    content: '';
+// .product-card-first {
+//   position: relative;
+//   &::before {
+//     position: absolute;
+//     left: 0;
+//     background-size: cover;
+//     content: '';
 
-    top: -140px;
-    background-image: url('../images/products/product-one-224.png');
-    width: 280px;
-    height: 280px;
-  }
-  @include tablet;
-}
+//     top: -140px;
+//     background-image: url('../images/products/product-one-280.png');
+//     width: 280px;
+//     height: 280px;
+
+//     @include tablet {
+//       background-image: url('../images/products/product-one-224.png');
+//       width: 224px;
+//       height: 224px;
+//       top: -138px;
+//     }
+//     @include desktop {
+//       background-image: url('../images/products/product-one-368.png');
+//       width: 368px;
+//       height: 394px;
+//       top: -261px;
+//       outline: 1px solid black;
+//     }
+//   }
+// }
+
 .product-card-second {
   background-color: #f0d1a5;
 }
