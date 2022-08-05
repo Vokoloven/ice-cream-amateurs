@@ -1,11 +1,12 @@
 .about {
-    background-color: #FFF5F6;
+    background-color: $colorBackgroundTertiary;
 }
 .about__label{
     @include fonts($ff: 'Titan One', $fw: 400, $fs: 18px, $lh: 21px);
     text-align: center;
     text-transform: uppercase;
-    color: #FFA5BA;
+    color: $colorFontQuinary;
+    padding-top: 60px;
 
     @include tablet{
     @include fonts($ff: 'Titan One', $fw: 400, $fs: 26px, $lh: 30px);
@@ -21,7 +22,9 @@
     @include fonts($ff: 'Titan One', $fw: 400, $fs: 34px, $lh: 39px);
     text-align: center;
     text-transform: uppercase;
-    color: #D41443;
+    color: $colorFontTertiary;
+    padding-top: 15px;
+    padding-bottom: 32px;
 
 
     @include tablet {
@@ -34,7 +37,10 @@
 }
 .about-text__one {
     @include fonts($fs: 12px, $lh: 19px);
-    color: #000000;
+    color: $colorFontPrimary;
+   padding-right: 80px;
+    padding-top: 40px;
+    padding-bottom: 40px;
 
     @include tablet {
             @include fonts($fs: 14px, $lh: 25px);     
@@ -47,7 +53,9 @@
 }
 
 .about-text__two {
-    color: #907E82;
+    color: $colorFontQuaternary;
+    padding-bottom: 20px;
+    padding-right: 80px;
     @include fonts($fs:12px, $lh: 19px);
    
     @include tablet {
@@ -62,6 +70,6 @@
         display: flex;
         align-items: center;
         text-align: center;
-        color: #D41443;
+        color: $colorFontTertiary;
         background-color: #ffffff;
 }
