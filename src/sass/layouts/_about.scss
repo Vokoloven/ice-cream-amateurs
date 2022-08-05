@@ -1,6 +1,20 @@
 .about {
     background-color: $colorBackgroundTertiary;
 }
+.about__container {
+    padding-bottom: 40px;
+@include tablet{
+    padding-left: 32px;
+    padding-right: 32px;
+    padding-bottom: 60px;
+}
+
+    @include desktop{
+    background-image: url("../images/about/fon-milk-1200-min.png");
+   background-repeat: no-repeat;
+   
+    
+}}
 
 .about__label{
     @include fonts($ff: 'Titan One', $fw: 400, $fs: 18px, $lh: 21px);
@@ -29,6 +43,8 @@
 
 
     @include tablet {
+        padding-top: 16px;
+        padding-bottom: 40px;
     @include fonts($ff: 'Titan One', $fw: 400, $fs: 48px, $lh: 55px);
     }
 
@@ -41,21 +57,22 @@
 .about-text__one {
     @include fonts($fs: 12px, $lh: 19px);
     color: $colorFontPrimary;
-   padding-right: 60px;
     padding-top: 40px;
     padding-bottom: 40px;
+    max-width: 220px;
 
     @include tablet {
         padding-bottom: 21px;
         padding-top: 0px;
-        padding-right: 14px;
+        min-width: 334px;
             @include fonts($fs: 14px, $lh: 25px);     
         }
 
     @include desktop {
         padding-bottom: 32px;
             padding-top: 0px;
-            padding-right: 100px;
+     max-width: 463px;
+
                      @include fonts($fs: 16px, $lh: 28px)
                     }
 
@@ -64,38 +81,37 @@
 .about-text__two {
     color: $colorFontQuaternary;
     padding-bottom: 20px;
-    padding-right: 60px;
+    max-width: 220px;
+    
     @include fonts($fs:12px, $lh: 19px);
    
     @include tablet {
             @include fonts($fs: 14px, $lh: 25px);
             padding-top: 0px;
-                padding-right: 14px;
+                min-width: 334px;
                 padding-bottom: 40px;
         }
 
      @include desktop {
                 padding-bottom: 40px;
                     padding-top: 0px;
-                    padding-right: 100px;
+                    max-width: 463px;
                     @include fonts($fs: 14px, $lh: 27px)}  }
 
 .about__btn {
     @include fonts($fw: 700, $fs: 16px, $lh: 21px);
         display: flex;
+        justify-content: center;
         align-items: center;
         text-align: center;
         color: $colorFontTertiary;
         background-color: #ffffff;
-        margin-bottom: 40px;
-
-        @include tablet{
-            margin-bottom: 60px;
+        width: 160px;
+        height: 44px;
+        border: none;
+        border-radius: 22px;
+        transition: all .25s ease-in-out;
         }
-                @include desktop{
-                margin-bottom: 121px;
-                }
-}
 
 .about__content {
     @include tablet{
@@ -108,8 +124,7 @@
     @include tablet{
         min-width: 336px;
         margin-right: 32px;
-        margin-left: 12px;
-
+        
     }
          @include desktop{
         min-width: 501px;
