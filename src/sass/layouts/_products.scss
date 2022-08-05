@@ -1,22 +1,98 @@
 .products {
   padding-top: 60px;
   padding-bottom: 60px;
+  text-align: center;
 }
 .product__pre-title {
-  @include fonts($ff: 'Titan One', $fw: 400, $fs: 16px, $lh: 1.16);
+  @include fonts($ff: 'Titan One', $fw: 400, $fs: 18px, $lh: 20px);
   color: $colorFontQuinary;
-
   padding-bottom: 15px;
+
+  @include tablet {
+    @include fonts($ff: 'Titan One', $fw: 400, $fs: 26px, $lh: 30px);
+    padding-bottom: 18px;
+  }
+  @include desktop {
+    @include fonts($ff: 'Titan One', $fw: 400, $fs: 30px, $lh: 34px);
+    padding-bottom: 16px;
+  }
 }
-// .product__title {
-// }
-// .product-card__list {
-// }
+.product__title {
+  text-transform: uppercase;
+  @include fonts($ff: 'Titan One', $fw: 400, $fs: 34px, $lh: 39px);
+  color: $colorFontTertiary;
+  @include desktop {
+    font-size: 58px;
+    line-height: calc(66 / 58);
+    letter-spacing: 0.06em;
+  }
+}
+.product-card__list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  @include tablet {
+    gap: 16px;
+  }
+  @include desktop {
+    gap: 32px;
+  }
+}
 // .product-card__item {
+
 // }
-// .product-card {
-// }
-// .product-card__title {
-// }
-// .product-card__desc {
-// }
+.product-card {
+  width: 280px;
+  height: 489px;
+  background-color: #ffb8ca;
+  border-radius: 24px;
+  padding-top: 160px;
+  padding-left: 39px;
+  padding-right: 39px;
+  margin-top: 199px;
+
+  @include tablet {
+    width: calc((100% - 32px) / 3);
+    height: 473px;
+
+    padding-top: 118px;
+    padding-right: 32px;
+    padding-left: 32px;
+    margin-top: 158px;
+  }
+  @include desktop {
+    width: calc((100% - 64px) / 3);
+    height: 535px;
+
+    padding-top: 165px;
+    padding-left: 64px;
+    padding-right: 64px;
+    margin-top: 148px;
+  }
+  ::before {
+    content: '';
+    background-image: url('../images/products/product-one-224.png');
+  }
+}
+.product-card-second {
+  background-color: #f0d1a5;
+}
+.product-card-third {
+  background-color: #c2e297;
+}
+.product-card__title {
+  @include fonts($ff: 'Titan One', $fw: 400, $fs: 20px, $lh: 23px);
+  color: $colorFontSecondary;
+  text-transform: uppercase;
+  margin-bottom: 70px;
+
+  @include desktop {
+    font-size: 30px;
+    line-height: calc(34 / 58);
+    letter-spacing: 0.06em;
+  }
+}
+.product-card__desc {
+  @include fonts($fw: 700, $fs: 14px, $lh: 21px);
+  color: $colorFontSecondary;
+}
