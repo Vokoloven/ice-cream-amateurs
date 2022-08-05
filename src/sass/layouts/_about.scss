@@ -9,6 +9,7 @@
     padding-top: 60px;
 
     @include tablet{
+        padding-top: 64px;
     @include fonts($ff: 'Titan One', $fw: 400, $fs: 26px, $lh: 30px);
     
 }
@@ -72,4 +73,5 @@
         text-align: center;
         color: $colorFontTertiary;
         background-color: #ffffff;
+        margin-bottom: 40px;
 }
