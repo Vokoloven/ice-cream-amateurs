@@ -13,6 +13,23 @@ footer::before {
     width: 100%;
     height: 1px;
     background-color: #E1E1E1;
+
+    @include tablet {
+    bottom: 42px;
+    }
+}
+
+.footer__div {
+    @include tablet {
+        display: flex;
+        justify-content: space-between;
+    }
+}
+
+.footer__div-2 {
+    @include tablet {
+        margin-top: 60px;
+    }
 }
 
 .footer__title {
@@ -25,6 +42,12 @@ footer::before {
     color: #FFA5BA;
 
     margin-bottom: 16px;
+
+    @include tablet{
+    @include fonts ('Titan One', normal, 400, 26px, 30px, 0.04em);
+    margin-bottom: 12px;
+    max-width: 340px;
+    }
 }
 
 .footer__title-accent {
@@ -37,6 +60,11 @@ footer::before {
     color: $colorFontTertiary;
 
     margin-bottom: 40px;
+
+    @include tablet{
+    @include fonts ('Titan One', normal, 400, 48px, 55px, 0.06em);
+    max-width: 340px;
+    }
 }
 
 .footer__soc-net-list {
@@ -49,6 +77,12 @@ footer::before {
     padding: 0;
 
     margin-bottom: 40px;
+    @include tablet {
+    max-height: 34px;
+    }
+    @include desktop {
+    max-height: 34px;
+    }
 }
 
 .footer__soc-net-item:not(:last-child) {
@@ -56,9 +90,21 @@ footer::before {
 }
 
 .footer__icon-soc-net {   
-    fill: #FEA5BB;   
+    fill: #FEA5BB; 
+
+    transition: fill 250ms ease-in-out;
+
     &:hover, &:focus {
     fill: $colorButtonBackgroundSecondary;
+    }
+
+    @include tablet {
+    width: 34px;
+    height: 34px;
+    }
+    @include desktop {
+    width: 34px;
+    height: 34px;
     }
 }
 
@@ -72,6 +118,9 @@ footer::before {
 
     margin-bottom: 40px;
 
+    @include tablet {
+    @include fonts ('DM Sans', normal, 700, 14px, 26px, 0.04em);
+    }
 }
 
 .footer__tel-number {
@@ -79,6 +128,10 @@ footer::before {
 
     color: $colorFontTertiary;
     text-decoration: none;
+
+    @include tablet {
+    @include fonts ('DM Sans', normal, 700, 14px, 26px, 0.04em);
+    }
 }
 
 .footer__rights {
@@ -88,8 +141,19 @@ footer::before {
 
     color: $colorFontQuaternary;
 
+    max-width: 160px;
+
+    margin-left: auto;
+    margin-right: auto;
     padding-top: 16px;
     padding-bottom: 3px;
+    
+    @include tablet {
+    @include fonts ('DM Sans', normal, 700, 14px, 26px, 0.02em);
+    max-width: 280px;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    }
 }
 
 
