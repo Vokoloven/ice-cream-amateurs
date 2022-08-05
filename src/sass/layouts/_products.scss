@@ -3,10 +3,10 @@
   padding-bottom: 60px;
 }
 .product__pre-title {
-  font-weight: 400;
-  font-size: 18px;
-  line-height: 1.16;
-  color: $colorFontSecondary;
+  @include fonts($ff: 'Titan One', $fw: 400, $fs: 16px, $lh: 1.16);
+  color: $colorFontQuinary;
+
+  padding-bottom: 15px;
 }
 // .product__title {
 // }
