@@ -1,6 +1,7 @@
 .about {
     background-color: $colorBackgroundTertiary;
 }
+
 .about__label{
     @include fonts($ff: 'Titan One', $fw: 400, $fs: 18px, $lh: 21px);
     text-align: center;
@@ -10,11 +11,10 @@
 
     @include tablet{
         padding-top: 64px;
-    @include fonts($ff: 'Titan One', $fw: 400, $fs: 26px, $lh: 30px);
-    
+    @include fonts($ff: 'Titan One', $fw: 400, $fs: 26px, $lh: 30px);   
 }
-
     @include desktop{
+        padding-top: 60px;
     @include fonts($ff: 'Titan One', $fw: 400, $fs: 30px, $lh: 34px);
     }
 }
@@ -34,36 +34,50 @@
 
     @include desktop {
     @include fonts($ff: 'Titan One', $fw: 400, $fs: 58px, $lh: 66px);
-  }
+    padding-top: 16px;
+    padding-bottom: 60px;
+}
 }
 .about-text__one {
     @include fonts($fs: 12px, $lh: 19px);
     color: $colorFontPrimary;
-   padding-right: 80px;
+   padding-right: 60px;
     padding-top: 40px;
     padding-bottom: 40px;
 
     @include tablet {
+        padding-bottom: 21px;
+        padding-top: 0px;
+        padding-right: 14px;
             @include fonts($fs: 14px, $lh: 25px);     
         }
 
     @include desktop {
-                     @include fonts($fs: 16px, $lh: 28px);
-                 }
+        padding-bottom: 32px;
+            padding-top: 0px;
+            padding-right: 100px;
+                     @include fonts($fs: 16px, $lh: 28px)
+                    }
 
 }
 
 .about-text__two {
     color: $colorFontQuaternary;
     padding-bottom: 20px;
-    padding-right: 80px;
+    padding-right: 60px;
     @include fonts($fs:12px, $lh: 19px);
    
     @include tablet {
             @include fonts($fs: 14px, $lh: 25px);
+            padding-top: 0px;
+                padding-right: 14px;
+                padding-bottom: 40px;
         }
 
-            @include desktop {
+     @include desktop {
+                padding-bottom: 40px;
+                    padding-top: 0px;
+                    padding-right: 100px;
                     @include fonts($fs: 14px, $lh: 27px)}  }
 
 .about__btn {
@@ -74,4 +88,31 @@
         color: $colorFontTertiary;
         background-color: #ffffff;
         margin-bottom: 40px;
+
+        @include tablet{
+            margin-bottom: 60px;
+        }
+                @include desktop{
+                margin-bottom: 121px;
+                }
+}
+
+.about__content {
+    @include tablet{
+    display: flex;
+    }
+}
+
+.about-image__cow{
+    
+    @include tablet{
+        min-width: 336px;
+        margin-right: 32px;
+        margin-left: 12px;
+
+    }
+         @include desktop{
+        min-width: 501px;
+        margin-right: 99px;
+    }
 }
