@@ -1,0 +1,13 @@
+.header {
+    &-top {
+        display: flex;
+        padding-top: 8px;
+        &__logo {
+            width: 199px;
+            height: 50px;
+        }
+        &__menu-open {
+            margin-left: auto;
+        }
+    }
+}

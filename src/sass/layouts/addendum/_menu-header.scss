@@ -1,0 +1,16 @@
+.menu-header {
+    display: flex;
+    align-items: center;
+    &__list {
+        list-style: none;
+        display: none;
+        margin-left: 128px;
+        @include desktop {
+            display: flex;
+        }
+    }    
+    &__link {
+        @include fonts ($fw: 700, $fs: 16px, $lh: 20px, );
+    }    
+    
+}
