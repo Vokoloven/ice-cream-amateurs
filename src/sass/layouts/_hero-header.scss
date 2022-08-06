@@ -1,13 +1,11 @@
 //   header
-.header {
+.container {
+    position: relative;
     overflow: hidden;
-    &__container {
-        @include tablet {
-            padding-left: 32px;
-            padding-right: 32px;
-            
-        }
-    }
+}
+
+.header__container {
+    
     height: 502px;
     background-image:url(../images/hero-header/hero-pic-320-2x-min.png),
      url(../images/hero-header/Ellipse.png);
@@ -36,8 +34,20 @@
         background-position: 636 108, 880 423, 16 388, 517 54;        
         height: 664px;
     }
+
+}
+.header {
+    overflow: hidden;
     background-image: linear-gradient(to right, FFA5BA, FFA5BA);
     background-color: $colorBackgroundPrimary;
+    &__container {
+        @include tablet {
+            padding-left: 32px;
+            padding-right: 32px;
+            
+        }
+    }
+
     &-top {
         display: flex;
         padding-top: 8px;
@@ -55,7 +65,7 @@
             margin-left: auto;
             color: $colorFontTertiary;
             width: 20px;
-            height: 12px;
+            height: 14px;
             transition: 250ms;
 
             &:hover,
@@ -66,7 +76,11 @@
         &__button {
             position: relative;
             display: none;
+            border-radius: 22px;
             @include tablet {
+                position: absolute;
+                right: 32px;
+                border-radius: 22px;
                 display: flex;
                 justify-content: center;
                 align-items: center;
@@ -100,6 +114,9 @@
             height: 10px;
             margin-left: 10px;
             fill: currentColor;
+            &-menu {
+                margin-left: 20px;
+            }
         }
     }
 }
