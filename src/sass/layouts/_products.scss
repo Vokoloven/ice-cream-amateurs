@@ -302,7 +302,7 @@
 //   padding-top: 130px;
 //   padding-bottom: 130px;
 // }
-.modal-wind {
+.modal-window {
   z-index: 1;
   position: absolute;
   bottom: 0;
@@ -311,16 +311,45 @@
   height: 0px;
   background-color: inherit;
   border-radius: 24px;
-  padding-top: 60px;
+  padding-top: 58px;
   padding-left: 39px;
   padding-right: 39px;
   margin-top: 0;
+  overflow: hidden;
+  @include tablet {
+    width: 224px;
+  }
+  @include desktop {
+    width: 368px;
+  }
+
   @include transition(height);
-  // @include transition($tp: transform);
   &.is-open {
     height: 629px;
+    @include tablet {
+      height: 611px;
+    }
+    @include desktop {
+      height: 796px;
+    }
   }
 }
 .modal-title {
-  margin-bottom: 30px;
+  margin-bottom: 70px;
+  @include tablet {
+    margin-bottom: 10px;
+  }
+  @include desktop {
+    margin-bottom: 70px;
+  }
 }
+// ,
+// .modal-card {
+//   margin-bottom: 30px;
+//   opacity: 0;
+//   transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
+//   transition-delay: 250ms;
+//   &.is-open {
+//     opacity: 1;
+//   }
+// }
