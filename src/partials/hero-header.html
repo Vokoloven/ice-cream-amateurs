@@ -1,64 +1,132 @@
-<header class="header container header__container" id="header">
+<header class="header" id="header">
+  <div class="container header__container">
+    <div class="menu-container" data-menu>
+      <button class="menu-container__button" type="button">
+        Buy now
+        <svg class="header-top__btn-icon header-top__btn-icon-menu" width="8px" height="10px">
+            <use
+            href="./images/hero-header/symbol-defs.svg#icon-btn-arrow"
+            class="header-top__btn-icon"
+            ></use>
+        </svg>
+      </button>
+      <nav>
+        <ul class="menu-container__list">
+          <li class="menu-container__item">
+              <a href="#header" class="menu-container__link">Home</a>
+          </li>
+          <li class="menu-container__item">
+              <a href="#about" class="menu-container__link">About us</a>
+          </li>
+          <li class="menu-container__item">
+            <a href="#advantages" class="menu-container__link">How it’s made?</a>
+          </li>
+          <li class="menu-container__item">
+            <a href="#products" class="menu-container__link">Our products</a>
+          </li>
+          <li class="menu-container__item">
+              <a href="#contacts" class="menu-container__link">Contact</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
     <div class="header-top">
-        <img src="./images/hero-header/Logo.svg" alt="logo" class="header-top__logo">
-        <nav class="menu-header">
-            <ul class="menu-header__list">
-                <li class="menu-header__item">
-                    <a href="#header" class="menu-header__link">Home</a>
-                </li>
-                <li class="menu-header__item">
-                    <a href="#about" class="menu-header__link">About us</a>
-                </li>
-                <li class="menu-header__item">
-                    <a href="#advantages" class="menu-header__link">How it’s made?</a>
-                </li>
-                <li class="menu-header__item">
-                    <a href="#products" class="menu-header__link">Our products</a>
-                </li>
-                <li class="menu-header__item">
-                    <a href="#contacts" class="menu-header__link">Contact</a>
-                </li>
-            </ul>
-        </nav>
-        <a class="menu-header__button">            
-            <svg class="header-top__menu-open">
-                <use href="./images/hero-header/symbol-defs.svg#icon-menu-open"></use>
-            </svg>    
-        </a>
-        <button class="header-top__button" type="button">
-            Buy now
-            <svg class="header-top__btn-icon" width="8px" height="10px">
-                <use href="./images/hero-header/symbol-defs.svg#icon-btn-arrow" class="header-top__btn-icon" ></use>
-            </svg>
-        </button>
+          <img
+          src="./images/hero-header/Logo.svg"
+          alt="logo"
+          class="header-top__logo"
+          />
+          <nav class="menu-header">
+        <ul class="menu-header__list">
+          <li class="menu-header__item">
+              <a href="#header" class="menu-header__link">Home</a>
+          </li>
+          <li class="menu-header__item">
+              <a href="#about" class="menu-header__link">About us</a>
+          </li>
+          <li class="menu-header__item">
+            <a href="#advantages" class="menu-header__link">How it’s made?</a>
+          </li>
+          <li class="menu-header__item">
+            <a href="#products" class="menu-header__link">Our products</a>
+          </li>
+          <li class="menu-header__item">
+              <a href="#contacts" class="menu-header__link">Contact</a>
+          </li>
+        </ul>
+      </nav>
+      <button type="button" class="menu__button menu-header__button is-open" data-menu-button>
+          <svg class="menu__icon header-top__menu-open" aria-label="Переключатель мобильного меню">
+              <use class="icon__menu" href="./images/hero-header/symbol-defs.svg#icon-menu-close" class="menu__close--position menu__icon--animate"></use>
+              <use class="icon__close" href="./images/hero-header/symbol-defs.svg#icon-menu-open" class="menu__icon--animate"></use>
+          </svg>
+      </button>
+      <button class="header-top__button" type="button">
+          Buy now
+          <svg class="header-top__btn-icon" width="8px" height="10px">
+              <use
+              href="./images/hero-header/symbol-defs.svg#icon-btn-arrow"
+              class="header-top__btn-icon"
+              ></use>
+          </svg>
+      </button>
     </div>
     <section class="hero">
-        <div class="hero__box-left">
-            <h1 class="hero__title">ice cream made with <span class="hero__title--heavy">passion</span></h1>
-            <ul class="hero__list">
-                <li class="hero__item">
-                    <a href="#products" class="hero__link hero__link--first">Products</a>
-                </li>
-                <li class="hero__item">
-                    <a href="#advantages" class="hero__link hero__link--last">How it’s made?</a>
-                </li>
-            </ul>
-            <p class="hero__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et</p>
-            <a class="hero__circle-right"> 
-                <svg class="hero__arrow-right">
-                    <use href="./images/hero-header/symbol-defs.svg#icon-arrow-left2" ></use>
-                </svg>
-            </a>
-        </div>
-        <ul class="hero__listbox">
-            <li class="hero__point">
-                <span class="hero__number">16</span>
-                <p class="hero__info">cafes</p>
-            </li>
-            <li class="hero__point">
-                <span class="hero__number">23</span>
-                <p class="hero__info">food trucks</p>
-            </li>
+      <div class="hero__box-left">
+        <h1 class="hero__title">
+          ice cream made with <span class="hero__title--heavy">passion</span>
+        </h1>
+        <ul class="hero__list">
+          <li class="hero__item">
+            <a href="#products" class="hero__link hero__link--first">Products</a>
+          </li>
+          <li class="hero__item">
+            <a href="#advantages" class="hero__link hero__link--last"
+              >How it’s made?</a
+            >
+          </li>
         </ul>
+        <p class="hero__text">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+          tempor incididunt ut labore et
+        </p>
+        <a class="hero__circle-right">
+          <svg class="hero__arrow-right">
+            <use
+              href="./images/hero-header/symbol-defs.svg#icon-arrow-left2"
+            ></use>
+          </svg>
+        </a>
+      </div>
+      <ul class="hero__listbox">
+        <li class="hero__point">
+          <span class="hero__number">16</span>
+          <p class="hero__info">cafes</p>
+        </li>
+        <li class="hero__point">
+          <span class="hero__number">23</span>
+          <p class="hero__info">food trucks</p>
+        </li>
+      </ul>
     </section>
+  </div>
 </header>
+<script src="./js/mobile-menu.js"></script>
+
+<!-- test -->
+
+<!-- <button type="button" class="menu__button menu-header__button is-open" data-menu-button>
+    <svg class="menu__icon header-top__menu-open" aria-label="Переключатель мобильного меню">
+        <use class="icon__menu" href="./images/hero-header/symbol-defs.svg#icon-menu-close" class="menu__close--position menu__icon--animate"></use>
+        <use class="icon__close" href="./images/hero-header/symbol-defs.svg#icon-menu-open" class="menu__icon--animate"></use>
+    </svg>
+</button>
+
+<a data-modal-open class="menu-header__button">
+    <svg class="header-top__menu-open">
+      <use href="./images/hero-header/symbol-defs.svg#icon-menu-open"></use>
+    </svg>
+  </a> -->
+  
+
+  
