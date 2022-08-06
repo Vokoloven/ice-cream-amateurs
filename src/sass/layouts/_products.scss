@@ -335,21 +335,25 @@
   }
 }
 .modal-title {
+  opacity: 0;
   margin-bottom: 70px;
+  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition-delay: 250ms;
   @include tablet {
     margin-bottom: 10px;
   }
   @include desktop {
     margin-bottom: 70px;
   }
+  .modal-window.is-open & {
+    opacity: 1;
+  }
 }
-// ,
-// .modal-card {
-//   margin-bottom: 30px;
-//   opacity: 0;
-//   transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
-//   transition-delay: 250ms;
-//   &.is-open {
-//     opacity: 1;
-//   }
-// }
+.modal-card {
+  opacity: 0;
+  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition-delay: 250ms;
+  .modal-window.is-open & {
+    opacity: 1;
+  }
+}
