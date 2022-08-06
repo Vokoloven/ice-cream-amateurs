@@ -1,0 +1,359 @@
+.products {
+  padding-top: 60px;
+  padding-bottom: 60px;
+  text-align: center;
+}
+// .product-section {
+//   @include tablet {
+//     padding-left: 32px;
+//     padding-right: 32px;
+//   }
+//   @include desktop {
+//     padding-left: 16px;
+//     padding-right: 16px;
+//   }
+// }
+.product__pre-title {
+  @include fonts($ff: 'Titan One', $fw: 400, $fs: 18px, $lh: 20px);
+  color: $colorFontQuinary;
+  padding-bottom: 15px;
+
+  @include tablet {
+    @include fonts($ff: 'Titan One', $fw: 400, $fs: 26px, $lh: 30px);
+    padding-bottom: 18px;
+  }
+  @include desktop {
+    @include fonts($ff: 'Titan One', $fw: 400, $fs: 30px, $lh: 34px);
+    padding-bottom: 16px;
+  }
+}
+.product__title {
+  text-transform: uppercase;
+  @include fonts($ff: 'Titan One', $fw: 400, $fs: 34px, $lh: 39px);
+  color: $colorFontTertiary;
+  @include desktop {
+    font-size: 58px;
+    line-height: calc(66 / 58);
+    letter-spacing: 0.06em;
+  }
+}
+.product-card__list {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  @include tablet {
+    gap: 16px;
+  }
+  @include desktop {
+    gap: 32px;
+  }
+}
+// }
+.product-card__item {
+  position: relative;
+  width: 280px;
+  height: 489px;
+  background-color: #ffb8ca;
+  border-radius: 24px;
+  padding-top: 160px;
+  padding-left: 39px;
+  padding-right: 39px;
+  margin-top: 148px;
+
+  @include tablet {
+    width: 224px;
+    height: 473px;
+
+    padding-top: 118px;
+    padding-right: 32px;
+    padding-left: 32px;
+    margin-top: 158px;
+  }
+  @include desktop {
+    width: 368px;
+    height: 535px;
+
+    padding-top: 165px;
+    padding-left: 64px;
+    padding-right: 64px;
+    margin-top: 281px;
+  }
+}
+.product-card-first {
+  position: relative;
+  &::before {
+    position: absolute;
+    left: 0;
+    background-size: cover;
+    content: '';
+
+    top: -140px;
+    background-image: url('../images/products/product-one-280.png');
+    width: 280px;
+    height: 280px;
+    @media (min-device-pixel-ratio: 2),
+      (min-resolution: 192dpi),
+      (min-resolution: 2dppx) {
+      background-image: url('../images/products/product-one-280@2.png');
+    }
+
+    @include tablet {
+      background-image: url('../images/products/product-one-224.png');
+      width: 224px;
+      height: 224px;
+      top: -138px;
+      @media (min-device-pixel-ratio: 2),
+        (min-resolution: 192dpi),
+        (min-resolution: 2dppx) {
+        background-image: url('../images/products/product-one-224@2.png');
+      }
+    }
+    @include desktop {
+      background-image: url('../images/products/product-one-368.png');
+      width: 368px;
+      height: 394px;
+      top: -261px;
+      @media (min-device-pixel-ratio: 2),
+        (min-resolution: 192dpi),
+        (min-resolution: 2dppx) {
+        background-image: url('../images/products/product-one-368@2.png');
+      }
+    }
+  }
+  &::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    top: 215px;
+    transform: translateX(-50%);
+    background-image: url('../images/products/product-dots.png');
+    width: 26px;
+    height: 6px;
+    @include tablet {
+      top: 173px;
+    }
+    @include desktop {
+      top: 231px;
+    }
+  }
+}
+
+.product-card-second {
+  background-color: #f0d1a5;
+  position: relative;
+  // padding-top: 140px;
+  &::before {
+    position: absolute;
+    left: 0;
+    background-size: cover;
+    content: '';
+
+    top: -140px;
+    background-image: url('../images/products/product-two-280.png');
+    width: 280px;
+    height: 280px;
+    @media (min-device-pixel-ratio: 2),
+      (min-resolution: 192dpi),
+      (min-resolution: 2dppx) {
+      background-image: url('../images/products/product-two-280@2.png');
+    }
+
+    @include tablet {
+      background-image: url('../images/products/product-two-224.png');
+      width: 224px;
+      height: 224px;
+      top: -138px;
+      @media (min-device-pixel-ratio: 2),
+        (min-resolution: 192dpi),
+        (min-resolution: 2dppx) {
+        background-image: url('../images/products/product-two-224@2.png');
+      }
+    }
+    @include desktop {
+      background-image: url('../images/products/product-two-368.png');
+      width: 368px;
+      height: 394px;
+      top: -261px;
+      @media (min-device-pixel-ratio: 2),
+        (min-resolution: 192dpi),
+        (min-resolution: 2dppx) {
+        background-image: url('../images/products/product-two-368@2.png');
+      }
+    }
+  }
+  &::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    top: 215px;
+    transform: translateX(-50%);
+    background-image: url('../images/products/product-dots.png');
+    width: 26px;
+    height: 6px;
+    @include tablet {
+      top: 173px;
+    }
+    @include desktop {
+      top: 231px;
+    }
+  }
+}
+.product-card-third {
+  background-color: #c2e297;
+  position: relative;
+  // padding-top: 140px;
+  &::before {
+    position: absolute;
+    left: 0;
+    background-size: cover;
+    content: '';
+
+    top: -140px;
+    background-image: url('../images/products/product-thre-280.png');
+    width: 280px;
+    height: 280px;
+    @media (min-device-pixel-ratio: 2),
+      (min-resolution: 192dpi),
+      (min-resolution: 2dppx) {
+      background-image: url('../images/products/product-thre-280@2.png');
+    }
+
+    @include tablet {
+      background-image: url('../images/products/product-thre-224.png');
+      width: 224px;
+      height: 224px;
+      top: -138px;
+      @media (min-device-pixel-ratio: 2),
+        (min-resolution: 192dpi),
+        (min-resolution: 2dppx) {
+        background-image: url('../images/products/product-thre-224@2.png');
+      }
+    }
+    @include desktop {
+      background-image: url('../images/products/product-thre-368.png');
+      width: 368px;
+      height: 394px;
+      top: -261px;
+      @media (min-device-pixel-ratio: 2),
+        (min-resolution: 192dpi),
+        (min-resolution: 2dppx) {
+        background-image: url('../images/products/product-thre-368@2.png');
+      }
+    }
+  }
+  &::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    top: 215px;
+    transform: translateX(-50%);
+    background-image: url('../images/products/product-dots.png');
+    width: 26px;
+    height: 6px;
+    @include tablet {
+      top: 173px;
+    }
+    @include desktop {
+      top: 231px;
+    }
+  }
+}
+.product-card__title {
+  @include fonts($ff: 'Titan One', $fw: 400, $fs: 20px, $lh: 23px);
+  color: $colorFontSecondary;
+  text-transform: uppercase;
+  margin-bottom: 70px;
+
+  @include desktop {
+    font-size: 30px;
+    line-height: calc(34 / 58);
+    letter-spacing: 0.06em;
+  }
+}
+.product-card__desc {
+  @include fonts($fw: 700, $fs: 14px, $lh: 21px);
+  color: $colorFontSecondary;
+  margin-bottom: 32px;
+  @include desktop {
+    margin-bottom: 60px;
+  }
+}
+.product-btn {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-image: url(../images/products/product-btn.jpg);
+  background-size: cover;
+  padding: 0;
+  border-style: none;
+  // border: none;
+}
+// ----------Product modal----------
+// .modal-thumb {
+//   position: absolute;
+//   top: 0%;
+//   left: 0;
+
+//   display: flex;
+//   justify-content: center;
+//   width: 100%;
+//   height: 100%;
+//   background-color: rgba(255, 255, 255, 0.858);
+//   padding-top: 130px;
+//   padding-bottom: 130px;
+// }
+.modal-window {
+  z-index: 1;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 280px;
+  height: 0px;
+  background-color: inherit;
+  border-radius: 24px;
+  padding-top: 58px;
+  padding-left: 39px;
+  padding-right: 39px;
+  margin-top: 0;
+  overflow: hidden;
+  @include tablet {
+    width: 224px;
+  }
+  @include desktop {
+    width: 368px;
+  }
+
+  @include transition(height);
+  &.is-open {
+    height: 629px;
+    @include tablet {
+      height: 611px;
+    }
+    @include desktop {
+      height: 796px;
+    }
+  }
+}
+.modal-title {
+  opacity: 0;
+  margin-bottom: 70px;
+  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition-delay: 250ms;
+  @include tablet {
+    margin-bottom: 10px;
+  }
+  @include desktop {
+    margin-bottom: 70px;
+  }
+  .modal-window.is-open & {
+    opacity: 1;
+  }
+}
+.modal-card {
+  opacity: 0;
+  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition-delay: 250ms;
+  .modal-window.is-open & {
+    opacity: 1;
+  }
+}
