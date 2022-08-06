@@ -97,6 +97,9 @@
     transition: 250ms;
     // display: none;
     background-color: $colorBackgroundModalSecondary;
+    @include desktop {
+        display: none;
+    }
     &.is-open {
         padding-top: 60px;
         transform: translateX(0);
@@ -108,6 +111,9 @@
         background-color: $colorBackgroundModalSecondary;
         @include tablet {
             width: 254px;
+        }
+        @include desktop {
+            display: none;
         }
     }
 }
