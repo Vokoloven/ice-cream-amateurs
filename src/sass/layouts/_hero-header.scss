@@ -1,9 +1,11 @@
 //   header
 .header {
+    overflow: hidden;
     &__container {
         @include tablet {
             padding-left: 32px;
             padding-right: 32px;
+            
         }
     }
     height: 502px;
