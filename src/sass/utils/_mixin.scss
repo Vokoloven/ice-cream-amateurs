@@ -43,6 +43,6 @@
 
 @mixin transition($tp: background-color, $td: 250ms, $tf: ease-in-out) {
   transition-property: $tp;
-  transition-delay: $td;
+  transition-duration: $td;
   transition-timing-function: $tf;
 }
