@@ -74,8 +74,8 @@
         @include tablet {
             position: absolute;
             right: 224px;
-            top: 51px;
-            transform: translateY(-8px);
+            top: 46px;
+            // transform: translateY(-8px);
             background-color: transparent;
         }
     }
@@ -90,17 +90,24 @@
     right: 0;
     transform: translateX(100%);
     height: 100%;
-    opacity: 0;
     width: inherit;
     opacity: 1;
     transition: 250ms;
+    transition-timing-function: ease-in-out;
     // display: none;
     background-color: $colorBackgroundModalSecondary;
     @include desktop {
-        display: none;
+        display: flex;
+        position: absolute;
+        height: max-content;
+        right: 100%;
+        padding-top: 0px;
+        background-color: transparent;
+        transition: 0ms;
+        transition-timing-function: ease-in-out;    
     }
     &.is-open {
-        padding-top: 60px;
+        padding-top: 122px;
         transform: translateX(0);
         filter: drop-shadow(-8px 0px 20px rgba(0, 0, 0, 0.25));
         opacity: 1;
@@ -120,6 +127,12 @@
 .menu-container {
     &__list {
         list-style: none;
+        @include desktop {
+            display: flex;
+            margin-top: 52px;
+            margin-left: 343px;
+            
+        }
     }
     &__button {
         @include fonts ($fw: 700, $fs: 16px, $lh: 21px);
@@ -134,8 +147,8 @@
         width: 209px;
         height: 44px;
         margin-bottom: 32px;
-        transition: 250ms;
-        transition-timing-function: ease-in-out;
+        // transition: 250ms;
+        // transition-timing-function: ease-in-out;
         &:hover,
         &:focus {
             background-color: $colorFontTertiary;
@@ -154,7 +167,18 @@
         &:nth-child(2n+1) {
             border-top: 1px solid #E18298;
             border-bottom: 1px solid #E18298;
+            @include desktop {
+                border: none;
+            }
         }
+        @include desktop {
+            padding: 0px;
+            margin-left: 32px;
+            &:first-child {
+                margin-left: 0px;
+            }
+        }
+
     }
     &__link {
         @include fonts ($fw: 700, $fs: 16px, $lh: 21px);
@@ -170,12 +194,87 @@
         &:focus {
             color: $colorFontTertiary;
         }
+        @include desktop {
+            padding: 0;
+        }
     }
 }
 
 .menu-header__button {
     height: 14px;
+    padding: 0px;
+    margin-top: 19px;
+    @include tablet {
+        margin-top: 0px;
+    }
 }
+
+.menu-container button {
+    position: absolute;
+    content: "";
+    left: -32px;
+    top: 32px;
+    transform: translateX(-100%);
+    position: absolute;
+    border-radius: 22px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 160px;
+    height: 44px;
+    transition: 0ms;
+    @include fonts ($fw: 700, $fs: 16px, $lh: 21px);
+    color: $colorFontTertiary;
+    border: none;
+    background-color: $colorFontSecondary;
+    border-radius: 22px;
+    transition: 400ms;
+    transition-timing-function: ease-in-out;
+    @media screen and (max-width: 768px) {
+        margin-bottom: 20px;
+        transform: translateX(0);
+        width: 186px;
+        left: 50%;
+        top: 58px;
+        transition: 0ms;
+    }
+    @include desktop {
+        left: 1009px;
+        transform: translateX(0);
+        width: 159px;
+        top: 40px;
+        transition: none; 
+    }
+    
+    &:hover,
+    &:focus {
+        background-color: $colorFontTertiary;
+        color: $colorFontSecondary;
+    }
+}
+.menu-container.is-open button {
+    position: absolute;
+    content: "";
+    margin-bottom: 20px;
+    transform: translateX(0);
+    width: 186px;
+    left: 34px;
+    top: 58px;
+    transition: 0ms;
+    transition-timing-function: ease-in-out;
+    @media screen and (max-width: 768px) {
+        margin-bottom: 20px;
+        transform: translateX(-50%);
+        width: 206px;
+        left: 50%;
+        top: 58px;
+        transition: 1ms;
+    }
+    @include desktop {
+        transition: none; 
+    }
+}
+
 
 //BACKDROP + MODAL
 
@@ -189,9 +288,179 @@
     top: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(255, 115, 80, 0.774);
+    background-color: #754a543b;
     &.is-hidden {
         opacity: 0;
         pointer-events: none;
     }
+    @media screen and (min-width: 350px) {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+}
+
+.hero-modal__close {
+    display: inline-flex;
+    position: absolute;
+    content: "";
+    width: 14px;
+    height: 14px;
+    right: 14px;
+    top: 20px;
+    transform: translatex(-50%);
+    padding: 0px;
+    margin: 0px;
+    background-color: transparent;
+    border: none;
+    color: $colorFontTertiary;
+    transition: 250ms;
+
+    &:focus,
+    &:hover {
+        color: $colorFontSecondary;
+    }
+}
+
+
+.hero-modal {
+    background-image: url(../images/hero-header/apples.svg), 
+    url(../images/hero-header/milk.svg),
+    url(../images/hero-header/heart.svg);
+    background-repeat: no-repeat;
+    background-size: 30px;
+    background-position: 250 70, 100 189, 200 375;
+    max-width: 450px;
+    top: 50%;
+    transform: translateY(-50%);
+    padding: 15px;
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    // width: 320px;
+    height: 473px;
+    background-color: #E17992;
+    @include tablet {
+        height: 384px;
+    }
+}
+
+.hero-form {
+    padding-top: 20px;
+    &__item {
+        position: relative;
+        height: max-content;
+        height: 34px;
+        margin-bottom: 28px;
+        &--textarea {
+            height: 85px;
+            margin-bottom: 10px;
+        }
+    }
+    &__label {
+        display: flex;
+        position: absolute;
+        content: "";
+        top: -4px;
+        left: 0;
+        transform: translateY(-100%);
+        @include fonts ($ff: 'Titan One', $ffs: normal, $fw: 400, $fs: 12px, $lh: 14px);
+        color: $colorFontTertiary;   
+    }
+    &__input {
+        border: none;
+        outline: none;
+        padding: 0;
+        margin: 0;
+        border-radius: 2px;
+        width: 100%;
+        max-width: 450px;
+        height: 34px;
+        padding-left: 40px;
+        color: $colorFontTertiary;     
+        cursor: pointer;
+        background-color: $colorBackgroundPrimary;
+        
+        &:focus,
+        &:hover {
+            box-shadow: 0px 1px 3px #D41443, 0px 1px 1px #D41443, 0px 2px 1px #D41443;
+        }
+    }
+    &__input-icon {
+        position: absolute;
+        content: "";
+        top: 50%;
+        left: 8px;
+        transform: translateY(-50%);
+        width: 18px;
+        height: 18px;
+        fill: $colorFontTertiary;
+    }
+    &__textarea {
+        &--container {
+            height: 85px;
+            margin-bottom: 10px;
+        }
+        margin-bottom: 10px;
+        padding-left: 15px;
+        padding-top: 5px;
+        max-width: 450px;
+        width: 100%;
+        height: 85px;
+        @include fonts ($ff: 'Titan One', $ffs: normal, $fw: 400, $fs: 12px, $lh: 14px);
+        color: #D41443;
+        background-color: $colorBackgroundPrimary;
+        resize: none;
+        border: none;
+        outline: none;
+        &::placeholder {
+            color: #d4144480;
+        }
+    }
+    &__button-send {
+        display: flex;
+        margin-left: auto;
+        margin-right: auto;
+        width: 200px;
+        height: 44px;
+        justify-content: center;
+        align-items: center;
+        color: $colorFontTertiary;
+        border-radius: 22px;
+        border: none;
+        transition: 250ms;
+        &:hover,
+        &:focus {
+            background-color: $colorFontTertiary;
+            color: $colorFontSecondary;
+        }
+    }
+}
+
+.checkbox-contanier {
+    &__checkbox {
+        appearance: none;
+        width: 12px;
+        height: 12px;
+        border: 1.5px solid $colorFontTertiary;
+        border-radius: 3px;
+        background-color: #ffb8ca;
+        }
+    }
+    text-align: center;
+    margin-bottom: 20px;
+    &__checkbox-label {
+        display: inline-flex;
+        align-items: center;
+        @include fonts ($ff: 'Titan One', $ffs: normal, $fw: 400, $fs: 10px, $lh: 12px);
+    }
+}
+
+.contract {
+    margin-left: 4px;
+    color: $colorFontTertiary;
+    @include fonts ($ff: 'Titan One', $ffs: normal, $fw: 700, $fs: 10px, $lh: 12px);
+}
+
+.icon__check {
+    margin-right: 8px;
 }

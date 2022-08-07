@@ -2,7 +2,7 @@
 <header class="header" id="header">
   <div class="container header__container">
     <div class="menu-container" data-menu>
-      <button class="menu-container__button" type="button">
+      <button class=" menu-container.is-open__button" type="button" data-modal-open>
         Buy now
         <svg class="header-top__btn-icon header-top__btn-icon-menu" width="8px" height="10px">
             <use
@@ -37,38 +37,10 @@
           alt="logo"
           class="header-top__logo"
           />
-          <nav class="menu-header">
-        <ul class="menu-header__list">
-          <li class="menu-header__item">
-              <a href="#header" class="menu-header__link">Home</a>
-          </li>
-          <li class="menu-header__item">
-              <a href="#about" class="menu-header__link">About us</a>
-          </li>
-          <li class="menu-header__item">
-            <a href="#advantages" class="menu-header__link">How it’s made?</a>
-          </li>
-          <li class="menu-header__item">
-            <a href="#products" class="menu-header__link">Our products</a>
-          </li>
-          <li class="menu-header__item">
-              <a href="#contacts" class="menu-header__link">Contact</a>
-          </li>
-        </ul>
-      </nav>
       <button type="button" class="menu__button menu-header__button is-open" data-menu-button>
           <svg class="menu__icon header-top__menu-open" aria-label="Переключатель мобильного меню">
               <use class="icon__menu" href="./images/hero-header/symbol-defs.svg#icon-menu-close" class="menu__close--position menu__icon--animate"></use>
               <use class="icon__close" href="./images/hero-header/symbol-defs.svg#icon-menu-open" class="menu__icon--animate"></use>
-          </svg>
-      </button>
-      <button class="header-top__button" type="button" data-modal-open >
-          Buy now
-          <svg class="header-top__btn-icon" width="8px" height="10px">
-              <use
-              href="./images/hero-header/symbol-defs.svg#icon-btn-arrow"
-              class="header-top__btn-icon"
-              ></use>
           </svg>
       </button>
     </div>
@@ -113,8 +85,67 @@
   </div>
   <div class="header-backdrop is-hidden" data-modal>
     <div class="hero-modal">
-      Lorem ipsum dolor sit, amet consectetur adipisicing elit. Natus molestiae minus, nobis illo voluptas id dolores suscipit, tenetur voluptatem culpa architecto, ea modi reprehenderit optio dolorum! Consequuntur commodi, placeat, quas autem cum error est rerum culpa quasi voluptatem suscipit quos esse a officiis expedita, delectus assumenda! Tenetur omnis a, eaque adipisci dolorum aliquid minus culpa quidem deleniti beatae error animi iure eius reprehenderit dolor delectus dolore. Sapiente excepturi pariatur quibusdam eaque facilis hic suscipit quam molestias veritatis reiciendis autem ratione nihil architecto atque maiores magni repellat placeat nobis totam nostrum eveniet ab officiis, iusto distinctio! Fugit culpa eius magni asperiores voluptatibus voluptate eos perferendis accusantium, explicabo assumenda recusandae, saepe alias eligendi architecto voluptates sequi ducimus. Nemo, voluptatibus! Laboriosam mollitia sapiente nisi quam doloremque ipsum accusamus, repellat beatae nihil quaerat. Suscipit, dolore optio ipsum laborum ut iste inventore ab eligendi! Necessitatibus sint minus id similique labore quos officiis aliquid, repellat dolores et repellendus voluptates laborum odit tempora harum porro autem dolore alias iste officia. Earum pariatur reiciendis harum dolor neque dignissimos itaque excepturi tempora nam vero quaerat dolores accusamus laboriosam facilis quia doloribus fuga mollitia, amet exercitationem nulla voluptate officia recusandae dolorem. Maxime corrupti unde ad dignissimos esse fuga sequi voluptatibus!
-      <button data-modal-close class="hero-modal__close"></button>
+      <img
+      src="./images/hero-header/Logo.svg"
+      alt="logo"
+      class="header-top__logo header-top__logo--menu"
+      />
+      <form class="hero-form">
+        <div class="hero-form__item">
+          <label class="hero-form__label">
+            Name
+          </label>
+          <input type="text" class="hero-form__input" placeholder=" ">
+          <svg class="hero-form__input-icon">
+            <use href="./images/hero-header/symbol-defs-new.svg#icon-person-black"></use>
+          </svg>
+        </div>
+        <div class="hero-form__item">
+          <label class="hero-form__label">
+            Phone
+          </label>
+          <input type="text" class="hero-form__input" placeholder=" ">
+          <svg class="hero-form__input-icon">
+            <use href="./images/hero-header/symbol-defs-new.svg#icon-phone-black"></use>
+          </svg>
+        </div>
+        <div class="hero-form__item">
+          <label class="hero-form__label">
+            Email
+          </label>
+          <input type="text" class="hero-form__input" placeholder=" ">
+          <svg class="hero-form__input-icon">
+            <use href="./images/hero-header/symbol-defs-new.svg#icon-email-black"></use>
+          </svg>
+        </div>
+        <div class="hero-form__item hero-form__item--textarea">
+          <label class="hero-form__label">
+            Comments
+          </label>
+          <textarea name="textarea" class="hero-form__textarea" placeholder="Enter you text"></textarea>
+        </div>
+        <div class="checkbox-contanier">
+          <label class="checkbox-contanier__checkbox-label">
+            <input type="checkbox" class="checkbox-contanier__checkbox" name="topic">
+            <span class="icon__check"></span>
+            Соглашаюсь с рассылкой и принимаю
+            <a href="https://goit.ua/marathon/?utm_source=site&amp;utm_medium=mainsite&amp;utm_campaign=button" class="contract">Условия договора</a>
+          </label>
+        </div>
+        <button type="button" class="hero-form__button-send">SEND
+          <svg class="header-top__btn-icon header-top__btn-icon-menu" width="8px" height="10px">
+            <use
+            href="./images/hero-header/symbol-defs.svg#icon-btn-arrow"
+            class="header-top__btn-icon"
+            ></use>
+        </svg>
+        </button>
+      </form>
+      <button data-modal-close class="hero-modal__close">
+        <svg class="hero-modal__icon" width="14px" height=" 14px">
+          <use href="./images/hero-header/symbol-defs.svg#icon-menu-close"></use>
+      </svg>        
+      </button>
     </div>
   </div>
   
@@ -137,4 +168,5 @@
     </svg>
   </a> -->
   
+
 
