@@ -59,6 +59,14 @@
             &--menu {
                 margin-right: auto;
                 margin-bottom: 10px;
+                @include tablet {
+                    margin-left: auto;
+                    margin-bottom: 10px;
+                }
+                @include desktop {
+                    margin-left: auto;
+                    margin-bottom: 20px;
+                }
             }
         }
         &__menu-open {
