@@ -1,7 +1,8 @@
+
 <header class="header" id="header">
   <div class="container header__container">
     <div class="menu-container" data-menu>
-      <button class="menu-container__button" type="button">
+      <button class="menu-container__button" type="button" data-modal-open id="menu-button">
         Buy now
         <svg class="header-top__btn-icon header-top__btn-icon-menu" width="8px" height="10px">
             <use
@@ -10,6 +11,15 @@
             ></use>
         </svg>
       </button>
+      <!-- <button class="menu-container__button" type="button" data-modal-open id="menu-button">
+        Buy now
+        <svg class="header-top__btn-icon header-top__btn-icon-menu" width="8px" height="10px">
+            <use
+            href="./images/hero-header/symbol-defs.svg#icon-btn-arrow"
+            class="header-top__btn-icon"
+            ></use>
+        </svg>
+      </button> -->
       <nav>
         <ul class="menu-container__list">
           <li class="menu-container__item">
@@ -61,7 +71,7 @@
               <use class="icon__close" href="./images/hero-header/symbol-defs.svg#icon-menu-open" class="menu__icon--animate"></use>
           </svg>
       </button>
-      <button class="header-top__button" type="button">
+      <button class="header-top__button" type="button" data-modal-open>
           Buy now
           <svg class="header-top__btn-icon" width="8px" height="10px">
               <use
@@ -110,7 +120,15 @@
       </ul>
     </section>
   </div>
+  <div class="header-backdrop is-hidden" data-modal>
+    <div class="hero-modal">
+      Lorem ipsum dolor sit, amet consectetur adipisicing elit. Natus molestiae minus, nobis illo voluptas id dolores suscipit, tenetur voluptatem culpa architecto, ea modi reprehenderit optio dolorum! Consequuntur commodi, placeat, quas autem cum error est rerum culpa quasi voluptatem suscipit quos esse a officiis expedita, delectus assumenda! Tenetur omnis a, eaque adipisci dolorum aliquid minus culpa quidem deleniti beatae error animi iure eius reprehenderit dolor delectus dolore. Sapiente excepturi pariatur quibusdam eaque facilis hic suscipit quam molestias veritatis reiciendis autem ratione nihil architecto atque maiores magni repellat placeat nobis totam nostrum eveniet ab officiis, iusto distinctio! Fugit culpa eius magni asperiores voluptatibus voluptate eos perferendis accusantium, explicabo assumenda recusandae, saepe alias eligendi architecto voluptates sequi ducimus. Nemo, voluptatibus! Laboriosam mollitia sapiente nisi quam doloremque ipsum accusamus, repellat beatae nihil quaerat. Suscipit, dolore optio ipsum laborum ut iste inventore ab eligendi! Necessitatibus sint minus id similique labore quos officiis aliquid, repellat dolores et repellendus voluptates laborum odit tempora harum porro autem dolore alias iste officia. Earum pariatur reiciendis harum dolor neque dignissimos itaque excepturi tempora nam vero quaerat dolores accusamus laboriosam facilis quia doloribus fuga mollitia, amet exercitationem nulla voluptate officia recusandae dolorem. Maxime corrupti unde ad dignissimos esse fuga sequi voluptatibus!
+      <button data-modal-close class="hero-modal__close"></button>
+    </div>
+  </div>
+  
 </header>
+<script src="./js/hero-modal.js"></script>
 <script src="./js/mobile-menu.js"></script>
 
 <!-- test -->
@@ -129,4 +147,3 @@
   </a> -->
   
 
-  

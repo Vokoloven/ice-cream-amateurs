@@ -77,7 +77,6 @@
             top: 51px;
             transform: translateY(-8px);
             background-color: transparent;
-
         }
     }
 }
@@ -176,4 +175,23 @@
 
 .menu-header__button {
     height: 14px;
+}
+
+//BACKDROP + MODAL
+
+// .header-backdrop
+
+.header-backdrop {
+    z-index: 100;
+    position: fixed;
+    content: "";
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 115, 80, 0.774);
+    &.is-hidden {
+        opacity: 0;
+        pointer-events: none;
+    }
 }
