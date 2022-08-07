@@ -83,13 +83,16 @@
   overflow: auto;
 
   @include transition(opacity);
-  opacity: 1;
 
   background-color: rgba(23, 23, 23, 0.3);
 
   &.gallery__backdrop--hidden {
     opacity: 0;
     pointer-events: none;
+
+    & > .gallery__modal {
+      transform: translate(-50%, -50%) scale(0.5);
+    }
   }
 }
 
@@ -97,10 +100,11 @@
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%);
 
-  width: 90vw;
-  height: 90vh;
+  @include transition(transform);
+  transform: translate(-50%, -50%) scale(1);
+
+  height: 75vh;
   padding: 25px;
 
   background-color: transparent;
