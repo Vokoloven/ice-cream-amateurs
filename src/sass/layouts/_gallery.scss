@@ -66,3 +66,49 @@
     transform: scale3d(1.3, 1.3, 5);
   }
 }
+.gallery__backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 20;
+
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+
+  background-color: rgba(23, 23, 23, 0.3);
+
+  &.gallery__backdrop--hidden {
+    opacity: 1;
+    pointer-events: none;
+  }
+}
+
+.gallery__modal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  width: 75%;
+  height: 75%;
+  padding: 25px;
+
+  background-color: $colorBackgroundQuaternary;
+}
+
+.gallery__button {
+  position: absolute;
+  top: 0;
+  right: 0;
+  transform: translate(50%, -50%);
+
+  background: transparent;
+  border: none;
+}
+
+.gallery__button-icon {
+  width: 50px;
+  height: 50px;
+  fill: $colorButtonBackgroundSecondary;
+}
