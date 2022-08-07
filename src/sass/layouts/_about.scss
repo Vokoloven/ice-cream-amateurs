@@ -3,17 +3,11 @@
 }
 .about__container {
     padding-bottom: 40px;
+
 @include tablet{
     padding-left: 32px;
     padding-right: 32px;
     padding-bottom: 60px;
-}
-
-    @include desktop{
-    background-image: url("../images/about/fon-milk-1200-min.png");
-   background-repeat: no-repeat;
-   
-    
 }}
 
 .about__label{
@@ -136,3 +130,18 @@
         margin-right: 99px;
     }
 }
+.about__content {
+    background-image: url("../images/about/fon-milk-280-min.png");
+    background-repeat: no-repeat;
+     background-position-y: 70%;
+
+    @include tablet{
+        background-image: none;
+    }
+
+    @include desktop {
+            background-image: url("../images/about/fon-milk-1200-min.png");
+            background-repeat: no-repeat;
+
+            
+}}
