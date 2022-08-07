@@ -59,6 +59,11 @@
   margin-top: 21px;
 }
 
+.gallery__button-open {
+  border: none;
+  background-color: transparent;
+}
+
 .gallery__image {
   @include transition(transform);
   &:hover,
@@ -76,10 +81,12 @@
   height: 100%;
   overflow: hidden;
 
+  overflow: auto;
+
   background-color: rgba(23, 23, 23, 0.3);
 
   &.gallery__backdrop--hidden {
-    opacity: 1;
+    opacity: 0;
     pointer-events: none;
   }
 }
@@ -90,14 +97,14 @@
   left: 50%;
   transform: translate(-50%, -50%);
 
-  width: 75%;
-  height: 75%;
+  width: 90vw;
+  height: 90vh;
   padding: 25px;
 
-  background-color: $colorBackgroundQuaternary;
+  background-color: transparent;
 }
 
-.gallery__button {
+.gallery__button-close {
   position: absolute;
   top: 0;
   right: 0;
@@ -111,4 +118,38 @@
   width: 50px;
   height: 50px;
   fill: $colorButtonBackgroundSecondary;
+}
+
+.grid-wrapper > div > img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 5px;
+}
+
+.grid-wrapper {
+  display: grid;
+  grid-gap: 20px;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-auto-rows: 200px;
+  grid-auto-flow: dense;
+
+  & > div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  & .wide {
+    grid-column: span 2;
+  }
+
+  & .tall {
+    grid-row: span 2;
+  }
+
+  & .big {
+    grid-column: span 2;
+    grid-row: span 2;
+  }
 }
