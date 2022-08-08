@@ -549,4 +549,7 @@
     // background-image: url("../images/Vector.svg");transition-duration: 250ms;
     transition-duration: 250ms;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    @media screen and (max-width: 320px) {
+        bottom: -4px;
+    }
 }
