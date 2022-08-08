@@ -7,9 +7,12 @@
 
 .customer-reviews__feedback-overlay {
   padding: 43px 58px 26px;
-  margin: 42px;
-
+  margin-bottom: 36px;
   background-color: #fafafa;
+
+  @include tablet {
+    padding: 41px 55px 41px 51px;
+  }
 }
 
 .customer-reviews__photo {
@@ -17,10 +20,9 @@
 }
 
 .customer-reviews__feedback {
-  display: block;
   position: relative;
 
-  min-width: 157px;
+  width: 157px;
 
   text-align: center;
   @include fonts($fs: 12px, $lh: 31px);
@@ -32,14 +34,46 @@
     #e1e1e1 31px
   );
 
+  @include tablet {
+    width: 620px;
+    @include fonts($fs: 16px, $lh: 30px);
+    background: repeating-linear-gradient(
+      to bottom,
+      transparent 0px,
+      transparent 27px,
+      #e1e1e1 28px
+    );
+  }
+
+  &::before {
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    transform: translate(-12px, -13px);
+
+    width: 54px;
+    height: 40px;
+
+    content: '';
+    background-image: url('/src/images/customer-reviews/coma.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+    opacity: 0.5;
+
+    @include tablet {
+      transform: translate(-45px, -15px);
+    }
+  }
+
   &::after {
     position: absolute;
-    right: 0;
-    top: 0;
-    transform: translate(50%, 50%);
+    right: 50%;
+    bottom: -34px;
+    transform: translateX(50%);
 
-    width: 6px;
-    height: 6px;
+    width: 32px;
+    height: 4px;
 
     content: '';
     background-image: url('/src/images/customer-reviews/Ellipse.svg');
