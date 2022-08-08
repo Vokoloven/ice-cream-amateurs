@@ -1,0 +1,54 @@
+.customer-reviews__overlay {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.customer-reviews__feedback-overlay {
+  padding: 43px 58px 26px;
+  margin: 42px;
+
+  background-color: #fafafa;
+}
+
+.customer-reviews__photo {
+  margin-bottom: 32px;
+}
+
+.customer-reviews__feedback {
+  display: block;
+  position: relative;
+
+  min-width: 157px;
+
+  text-align: center;
+  @include fonts($fs: 12px, $lh: 31px);
+  color: $colorFontPrimary;
+  background: repeating-linear-gradient(
+    to bottom,
+    transparent 0px,
+    transparent 30px,
+    #e1e1e1 31px
+  );
+
+  &::after {
+    position: absolute;
+    right: 0;
+    top: 0;
+    transform: translate(50%, 50%);
+
+    width: 6px;
+    height: 6px;
+
+    content: '';
+    background-image: url('/src/images/customer-reviews/Ellipse.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+}
+
+.customer-reviews__name {
+  @include fonts($fs: 14px, $lh: 26px);
+  color: $colorFontPrimary;
+}
