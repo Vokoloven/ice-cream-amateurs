@@ -38,8 +38,27 @@
       <li class="contacts__item contacts__third-item"></li>
     </ul>
     <div class="contact-btn-container">
-      <button class="contacts-btn our-locations-btn">Our Locations ></button>
-      <button class="contacts-btn franchise-btn">Franchise ></button>
+      <button class="contacts-btn our-locations-btn" type="button" data-contacts-open>Our Locations ></button>
+      <button class="contacts-btn franchise-btn" type="button">Franchise ></button>
+    
+      <div class="contacts__backdrop is-hidden" data-contacts>
+      <div class="contacts__modal">
+        <button class="contacts__button-close" type="button" data-contacts-close>
+          <svg class="contacts__button-icon" width="20" height="20">
+            <use href="/src/images/icons/icons.svg#cross" />
+          </svg>
+        </button>
+
+          <div class="contacts__map">
+          <iframe 
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d50396.00521999306!2d-118.33347320999647!3d34.03501222333775!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80c2c63e86511a9d%3A0x4d7642199f3a7cd5!2sVan%20Leeuwen%20Ice%20Cream!5e0!3m2!1sru!2str!4v1659951510155!5m2!1sru!2str"
+          width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"></iframe>
+          </div>
+      </div>
+      </div>
+      
     </div>
   </div>
 </section>
+
