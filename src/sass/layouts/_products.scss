@@ -91,11 +91,7 @@
     background-image: url('../images/products/product-one-280.png');
     width: 280px;
     height: 280px;
-    @media (min-device-pixel-ratio: 2),
-      (min-resolution: 192dpi),
-      (min-resolution: 2dppx) {
-      background-image: url('../images/products/product-one-280@2.png');
-    }
+   
 
     @include tablet {
       background-image: url('../images/products/product-one-224.png');
