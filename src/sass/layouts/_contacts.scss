@@ -1,3 +1,15 @@
+.visualy-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0);
+  overflow: hidden;
+}
 .contacts {
   padding-top: 30px;
   padding-bottom: 40px;
@@ -128,14 +140,31 @@
   padding-top: 20px;
   padding-bottom: 24px;
   line-height: 1.86;
+  &:last-child {
+    padding-bottom: 0;
+    border-bottom: none;
+  }
   &:nth-child(n + 2) {
     padding-top: 24px;
   }
+  & > .contact-card__item-title {
+    padding-bottom: 8px;
+  }
 }
-.contact-card__item-title {
+.contact-schedule {
   padding-bottom: 8px;
 }
 .contact-card__item-desc {
   line-height: 1.5;
   color: $colorFontQuaternary;
+}
+.contact-card__item-time {
+  color: $colorFontQuinary;
+}
+.contact-mail__link,
+.contact-address__link {
+  color: $colorFontQuaternary;
+}
+.contact-navi > li {
+  padding-bottom: 0;
 }
