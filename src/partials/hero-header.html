@@ -59,7 +59,7 @@
             >
           </li>
         </ul>
-        <p class="hero__text">
+        <!-- <p class="hero__text">
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
           tempor incididunt ut labore et
         </p>
@@ -69,7 +69,7 @@
               href="./images/hero-header/symbol-defs.svg#icon-arrow-left2"
             ></use>
           </svg>
-        </a>
+        </a> -->
       </div>
       <ul class="hero__listbox">
         <li class="hero__point">
@@ -81,6 +81,21 @@
           <p class="hero__info">food trucks</p>
         </li>
       </ul>
+      <label class="checkbox-test">
+        <input type="checkbox" class="checkbox-test__checkbox">
+
+        <span class="checkbox-test__list1">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+        </span>
+        <span class="checkbox-test__list2">
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloremque cumque officiis adipisci porro, esse eaque fuga nemo velit! Pariatur vero molestias quia sed, a est id dignissimos aliquam reiciendis sunt consequuntur labore minus ad dolorum voluptatum eos autem excepturi
+        </span>
+        <svg class="hero__arrow-right">
+          <use
+            href="./images/hero-header/symbol-defs.svg#icon-arrow-left2"
+          ></use>
+        </svg>
+      </label>
     </section>
   </div>
   <div class="header-backdrop is-hidden" data-modal>
@@ -92,37 +107,37 @@
       />
       <form class="hero-form">
         <div class="hero-form__item">
-          <label class="hero-form__label">
+          <label class="hero-form__label" for="name">
             Name
           </label>
-          <input type="text" class="hero-form__input" placeholder=" ">
+          <input type="text" class="hero-form__input" placeholder=" " id="name">
           <svg class="hero-form__input-icon">
             <use href="./images/hero-header/symbol-defs-new.svg#icon-person-black"></use>
           </svg>
         </div>
         <div class="hero-form__item">
-          <label class="hero-form__label">
+          <label class="hero-form__label" for="phone">
             Phone
           </label>
-          <input type="text" class="hero-form__input" placeholder=" ">
+          <input type="text" class="hero-form__input" placeholder=" " id="phone">
           <svg class="hero-form__input-icon">
             <use href="./images/hero-header/symbol-defs-new.svg#icon-phone-black"></use>
           </svg>
         </div>
         <div class="hero-form__item">
-          <label class="hero-form__label">
+          <label class="hero-form__label" for="mail">
             Email
           </label>
-          <input type="text" class="hero-form__input" placeholder=" ">
+          <input type="text" class="hero-form__input" placeholder=" " id="mail">
           <svg class="hero-form__input-icon">
             <use href="./images/hero-header/symbol-defs-new.svg#icon-email-black"></use>
           </svg>
         </div>
         <div class="hero-form__item hero-form__item--textarea">
-          <label class="hero-form__label">
+          <label class="hero-form__label" for="comments">
             Comments
           </label>
-          <textarea name="textarea" class="hero-form__textarea" placeholder="Enter you text"></textarea>
+          <textarea name="textarea" class="hero-form__textarea" placeholder="Enter you text" id="comments"></textarea>
         </div>
         <div class="checkbox-contanier">
           <label class="checkbox-contanier__checkbox-label">
@@ -148,25 +163,10 @@
       </button>
     </div>
   </div>
-  
+
+
 </header>
 <script src="./js/hero-modal.js"></script>
 <script src="./js/mobile-menu.js"></script>
-
-<!-- test -->
-
-<!-- <button type="button" class="menu__button menu-header__button is-open" data-menu-button>
-    <svg class="menu__icon header-top__menu-open" aria-label="Переключатель мобильного меню">
-        <use class="icon__menu" href="./images/hero-header/symbol-defs.svg#icon-menu-close" class="menu__close--position menu__icon--animate"></use>
-        <use class="icon__close" href="./images/hero-header/symbol-defs.svg#icon-menu-open" class="menu__icon--animate"></use>
-    </svg>
-</button>
-
-<a data-modal-open class="menu-header__button">
-    <svg class="header-top__menu-open">
-      <use href="./images/hero-header/symbol-defs.svg#icon-menu-open"></use>
-    </svg>
-  </a> -->
-  
 
 

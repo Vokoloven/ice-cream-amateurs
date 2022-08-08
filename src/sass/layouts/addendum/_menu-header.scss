@@ -230,7 +230,7 @@
     border-radius: 22px;
     transition: 400ms;
     transition-timing-function: ease-in-out;
-    @media screen and (max-width: 768px) {
+    @media screen and (max-width: 767px) {
         margin-bottom: 20px;
         transform: translateX(0);
         width: 186px;
@@ -333,6 +333,10 @@
         background-size: 35px;
         background-position: 370 45, 100 150, 400 350; 
     }
+    @include desktop {
+        background-size: 35px;
+        background-position: 355 45, 110 185, 355 400; 
+    }
     max-width: 450px;
     top: 50%;
     transform: translateY(-50%);
@@ -391,6 +395,7 @@
         transform: translateY(-100%);
         @include fonts ($ff: 'Titan One', $ffs: normal, $fw: 400, $fs: 12px, $lh: 14px);
         color: $colorFontTertiary;   
+        cursor: pointer;
     }
     &__input {
         border: none;
@@ -414,9 +419,15 @@
         &:focus,
         &:hover {
             box-shadow: 0px 1px 3px #D41443, 0px 1px 1px #D41443, 0px 2px 1px #D41443;
+            
+        }
+        &:focus + &__input-icon {
+            width: 20px;
+            height: 20px;
         }
     }
     &__input-icon {
+        cursor: pointer;
         position: absolute;
         content: "";
         top: 50%;
@@ -425,8 +436,14 @@
         width: 18px;
         height: 18px;
         fill: $colorFontTertiary;
+        &:focus,
+        &:hover {
+            width: 20px;
+            height: 20px;   
+        }
     }
     &__textarea {
+        cursor: pointer;
         &--container {
             height: 85px;
             margin-bottom: 10px;
@@ -488,7 +505,9 @@
 }
 
 .checkbox-contanier {
+    cursor: pointer;
     &__checkbox {
+        cursor: pointer;
         margin-right: 5px;
         appearance: none;
         width: 20px;
@@ -511,6 +530,7 @@
         margin-bottom: 10px;
     }
     &__checkbox-label {
+        cursor: pointer;
         position: relative;
         display: inline-flex;
         align-items: center;
@@ -534,6 +554,12 @@
     &:focus {
         color: $colorFontSecondary;
     }
+    @include tablet {
+        @include fonts ($ff: 'Titan One', $ffs: normal, $fw: 700, $fs: 14px, $lh: 16px);        
+    }
+    @include desktop {
+        @include fonts ($ff: 'Titan One', $ffs: normal, $fw: 700, $fs: 16px, $lh: 18px);        
+    }
 }
 
 .icon__check {
@@ -549,4 +575,129 @@
     // background-image: url("../images/Vector.svg");transition-duration: 250ms;
     transition-duration: 250ms;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    @media screen and (max-width: 320px) {
+        bottom: -4px;
+    }
+}
+
+// .checkbox-test {
+
+// }
+// .checkbox-test__checkbox {
+// :checked .checkbox-test__box {
+//         display: none;
+//     }
+// }
+// .checkbox-test__container {
+    
+// }
+// .checkbox-test__checkbox:checked + .checkbox-test__box {
+//     display: block;
+// }
+// .checkbox-test__box {
+//     display: none;
+// }
+
+// .checkbox-test__checkbox:checked + .checkbox-test__text {
+//     display: none;
+// }
+
+// .checkbox-test__text {
+//     display: block;
+// }
+
+.checkbox-test {
+    @media screen and (max-width: 767px) {
+        display: none;
+    }
+    color: $colorFontTertiary;
+    pointer-events: none;
+    display: flex;
+    flex-direction: column-reverse;
+    position: absolute;
+    content: "";
+    left: 184px;
+    bottom: 42px;
+    transition: 250ms;
+    @include desktop {
+        left: 229px;
+        bottom: 84px;
+    }
+}
+
+.checkbox-test__checkbox {
+    cursor: pointer;
+    pointer-events: auto;
+    display: inline-flex;
+    margin-top: 7px;
+    width: 18px;
+    height: 18px;
+    background-color: $colorFontSecondary;
+    border-radius: 50%;
+    margin-right: auto;
+        appearance: none;
+        transition: 250ms;
+    @include desktop {
+        width: 26px;
+        height: 26px;
+        margin-top: 20px;
+    }
+}
+.checkbox-test__checkbox:checked {
+    background-color: #d41443;
+    color: white;
+}
+
+.checkbox-test__list1 {
+    pointer-events: none;
+    display: block;
+    transition: 250ms;
+    @include tablet {
+        display: block;
+        @include fonts ($fw: 400, $fs: 8px, $lh: 12px);      
+        color: $colorFontSecondary;  
+        height: 48px;
+        width: 114px;
+    }
+    @include desktop {
+        display: block;
+        @include fonts ($fw: 400, $fs: 14px, $lh: 20px);      
+        color: $colorFontSecondary;  
+        height: 78px;
+        width: 200px;
+    }
+}
+.checkbox-test__list2 {
+    transition: 250ms;
+    pointer-events: none;
+    display: none;
+    @include tablet {
+        @include fonts ($fw: 400, $fs: 8px, $lh: 12px);      
+        color: $colorFontSecondary;  
+        height: 48px;
+        width: 335px;
+    }
+    @include desktop {
+        @include fonts ($fw: 400, $fs: 14px, $lh: 20px);      
+        color: $colorFontSecondary;  
+        height: 78px;
+        width: 600px;
+    }
+}
+
+.checkbox-test__checkbox:checked ~ .checkbox-test__list1 {
+    display: none;
+}
+.checkbox-test__checkbox:checked ~ .checkbox-test__list2 {
+    display: block;
+}
+
+.checkbox-test__checkbox:checked ~ .hero__arrow-right {
+    fill: white;
+}
+
+.hero-form__input:focus ~ .hero-form__input-icon,
+.hero-form__input:hover ~ .hero-form__input-icon {
+    width: 20px;
+    height: 20px;
 }
