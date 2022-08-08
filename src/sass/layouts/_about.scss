@@ -134,6 +134,13 @@
     background-image: url("../images/about/fon-milk-280-min.png");
     background-repeat: no-repeat;
      background-position-y: 70%;
+@media (min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx)
+     {
+    background-image: url("../images/about/fon-milk-280@2x-min.png");
+    background-size: contain;
+    }
 
     @include tablet{
         background-image: none;
@@ -142,8 +149,12 @@
     @include desktop {
             background-image: url("../images/about/fon-milk-1200-min.png");
             background-repeat: no-repeat;
-
-            
+      @media (min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+        background-image: url("../images/about/fon-milk-1200@2x-min.png");
+        background-size: contain;
+    }           
 }}
 
 .checkbox-about__checkbox:checked+.checkbox-about__box {
