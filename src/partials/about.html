@@ -1,5 +1,5 @@
 <section class="about">
-  <div class="container about__container">
+  <div class="container about__container" id="about">
     <p class="about__label">tradition and love</p>
     <h2 class="about__title">how it’s made?</h2>
     <div class="about__content">
@@ -42,18 +42,39 @@
           Curabitur lacinia enim at ex blandit, vel pellentesque odio elementum.
           Mauris rhoncus orci in imperdiet placerat. Vestibulum euismod nisl
           suscipit ligula volutpat, a feugiat urna maximus. Cras massa nibh,
-          tincidunt.  <br> <br>
+          tincidunt. <br />
+          <br />
 
           Aliquam erat volutpat. Aenean accumsan.
         </p>
-        <button class="about__btn" type="submit">
-          Read more
-          <svg class="header-top__btn-icon" width="8px" height="10px">
-            <use
-              href="./images/hero-header/symbol-defs.svg#icon-btn-arrow"
+        <form>
+          <label class="checkbox-about">
+            Read more<svg
               class="header-top__btn-icon"
-            ></use>
-          </svg>
+              width="8px"
+              height="10px"
+            >
+              <use
+                href="./images/hero-header/symbol-defs.svg#icon-btn-arrow"
+                class="header-top__btn-icon"
+              ></use>
+            </svg>
+            <input
+              type="checkbox"
+              class="checkbox-about__checkbox"
+              name="topic"
+            />
+            <span class="checkbox-about__box"
+              >Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Assumenda voluptatum quidem possimus delectus quaerat cum
+              consectetur! Quae, quaerat blanditiis vel commodi illum a
+              assumenda sint. Quas voluptas, consectetur eaque explicabo sunt
+              numquam reprehenderit fugit repudiandae praesentium cupiditate
+              inventore, accusantium laborum doloribus magnam corrupti
+              assumenda! Consectetur corrupti quos eum repudiandae iusto!</span
+            >
+          </label>
+        </form>
       </div>
     </div>
   </div>
