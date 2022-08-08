@@ -12,6 +12,12 @@
         background-size: 171px 410px, 344px;
         background-position: 147 93, 66 83;
     }
+    @media screen and (min-width: 580px) {
+        background-image:url(../images/hero-header/hero-pic-320-2x-min.png),
+        url(../images/hero-header/Ellipse.png);
+        background-size: 171px 410px, 344px;
+        background-position: 147 93, 66px 83px;
+    }
     @include tablet {
         background-image:url(../images/hero-header/hero-pic-320-2x-min.png),
         url(../images/hero-header/baby-768-2x-min.png),
@@ -40,6 +46,11 @@
         @include tablet {
             padding-left: 32px;
             padding-right: 32px;
+            
+        }
+        @include desktop {
+            padding-left: 16px;
+            padding-right: 16px;
             
         }
     }
@@ -228,7 +239,7 @@
     &__text {
         display: none;
         @include tablet {
-            display: block;
+            display: none;
             @include fonts ($fw: 400, $fs: 8px, $lh: 10px);      
             color: $colorFontSecondary;  
             margin-top: 61px;
@@ -236,7 +247,7 @@
             width: 114px;
         }
         @include desktop {
-            display: block;
+            display: none;
             @include fonts ($fw: 400, $fs: 14px, $lh: 14px);      
             color: $colorFontSecondary;  
             margin-top: 108px;
@@ -313,15 +324,21 @@
     &__arrow-right {
         display: none;
         @include tablet {
-            display: block;
+            display: flex;
             position: relative;
             transform-origin: 100%;
             transform: scale(-1, 1);
             fill: currentColor;
             width: 6px;
+            height: 6px;
+            top: 67;
+            left: 0;
         }
         @include desktop {
+            top: 115;
+            left: 0;
             width: 8px;
+            height: 8px;
             transform-origin: 105%;
         }
     }
