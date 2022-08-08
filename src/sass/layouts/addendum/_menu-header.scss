@@ -714,6 +714,13 @@
     }
 }
 
+// .checkbox-test__checkbox {
+//     &:hover,
+//     &:focus {
+//         background-color: #D41443;
+//     }
+// }
+
 .checkbox-test__checkbox:checked ~ .checkbox-test__list1 {
     opacity: 0;
     transition-duration: 250ms;
@@ -746,6 +753,6 @@
     height: 20px;
 }
 
-.checkbox-test__checkbox:hover ~ .hero__arrow-right {
-    color: black;
-}
+// .checkbox-test__checkbox:hover ~ .hero__arrow-right {
+//     color: black;
+// }
