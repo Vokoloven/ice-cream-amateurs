@@ -286,6 +286,7 @@
   background-size: cover;
   padding: 0;
   border-style: none;
+
   // border: none;
 }
 // ----------Product modal----------
@@ -355,5 +356,11 @@
   transition-delay: 250ms;
   .modal-window.is-open & {
     opacity: 1;
+  }
+}
+.product-btn-close {
+  display: none;
+  .modal-window.is-open & {
+    display: inline-block;
   }
 }
