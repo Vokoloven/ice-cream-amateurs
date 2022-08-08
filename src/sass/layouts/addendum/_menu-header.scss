@@ -102,7 +102,11 @@
     transition-timing-function: ease-in-out;
     // display: none;
     background-color: $colorBackgroundModalSecondary;
+    @include tablet {
+        pointer-events: none;
+    }
     @include desktop {
+        pointer-events: all;
         display: flex;
         position: absolute;
         height: max-content;
@@ -113,6 +117,7 @@
         transition-timing-function: ease-in-out;    
     }
     &.is-open {
+        pointer-events: all;
         padding-top: 122px;
         transform: translateX(0);
         filter: drop-shadow(-8px 0px 20px rgba(0, 0, 0, 0.25));
@@ -142,6 +147,7 @@
         }
     }
     &__button {
+        pointer-events: all;
         @include fonts ($fw: 700, $fs: 16px, $lh: 21px);
         color: $colorFontTertiary;
         margin-left: auto;
@@ -208,6 +214,7 @@
 }
 
 .menu-header__button {
+    pointer-events: all;
     height: 14px;
     padding: 0px;
     margin-top: 19px;
@@ -217,6 +224,7 @@
 }
 
 .menu-container button {
+    pointer-events: all;
     position: absolute;
     content: "";
     left: -32px;
