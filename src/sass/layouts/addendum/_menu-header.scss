@@ -296,6 +296,8 @@
     width: 100%;
     height: 100%;
     background-color: #754a543b;
+    transition: 250ms;
+    transition-timing-function: ease-in-out;
     &.is-hidden {
         opacity: 0;
         pointer-events: none;
@@ -417,6 +419,8 @@
         color: $colorFontTertiary;     
         cursor: pointer;
         background-color: $colorBackgroundPrimary;
+        transition-duration: 250ms;
+        transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
         @include tablet {
             height: 30px;
         }
@@ -502,7 +506,8 @@
         color: $colorFontTertiary;
         border-radius: 22px;
         border: none;
-        transition: 250ms;
+        transition-duration: 250ms;
+        transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
         &:hover,
         &:focus {
             background-color: $colorFontTertiary;
@@ -529,6 +534,7 @@
             background-repeat: no-repeat;
             // background-color: white;
             margin-right: 8px;
+            transition: 250ms;
         }
     }
     text-align: center;
@@ -541,6 +547,7 @@
         position: relative;
         display: inline-flex;
         align-items: center;
+        
         @include fonts ($ff: 'Titan One', $ffs: normal, $fw: 400, $fs: 10px, $lh: 12px);
         color: $colorFontSecondary;
         @include tablet {
@@ -614,6 +621,8 @@
 // }
 
 .checkbox-test {
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
     @media screen and (max-width: 767px) {
         display: none;
     }
@@ -633,6 +642,8 @@
 }
 
 .checkbox-test__checkbox {
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
     cursor: pointer;
     pointer-events: auto;
     display: inline-flex;
@@ -643,7 +654,6 @@
     border-radius: 50%;
     margin-right: auto;
         appearance: none;
-        transition: 250ms;
     @include desktop {
         width: 26px;
         height: 26px;
@@ -651,11 +661,15 @@
     }
 }
 .checkbox-test__checkbox:checked {
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
     background-color: #d41443;
     color: white;
 }
 
 .checkbox-test__list1 {
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
     pointer-events: none;
     display: block;
     transition: 250ms;
@@ -675,7 +689,8 @@
     }
 }
 .checkbox-test__list2 {
-    transition: 250ms;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
     pointer-events: none;
     display: none;
     @include tablet {
@@ -694,13 +709,19 @@
 
 .checkbox-test__checkbox:checked ~ .checkbox-test__list1 {
     display: none;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .checkbox-test__checkbox:checked ~ .checkbox-test__list2 {
     display: block;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .checkbox-test__checkbox:checked ~ .hero__arrow-right {
     fill: white;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .hero-form__input:focus ~ .hero-form__input-icon,
