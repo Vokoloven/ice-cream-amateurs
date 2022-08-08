@@ -136,8 +136,10 @@
      background-position-y: 70%;
 @media (min-device-pixel-ratio: 2),
     (min-resolution: 192dpi),
-    (min-resolution: 2dppx){
-    background-image: url("../images/about/fon-milk-280-min.png");
+    (min-resolution: 2dppx)
+     {
+    background-image: url("../images/about/fon-milk-280@2x-min.png");
+    background-size: contain;
     }
 
     @include tablet{
@@ -151,6 +153,7 @@
     (min-resolution: 192dpi),
     (min-resolution: 2dppx) {
         background-image: url("../images/about/fon-milk-1200@2x-min.png");
+        background-size: contain;
     }           
 }}
 
