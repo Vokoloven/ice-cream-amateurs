@@ -589,9 +589,14 @@
     content: "";
     left: 184px;
     bottom: 42px;
+    @include desktop {
+        left: 229px;
+        bottom: 84px;
+    }
 }
 
 .checkbox-test__checkbox {
+    display: inline-flex;
     margin-top: 7px;
     width: 18px;
     height: 18px;
@@ -599,16 +604,47 @@
     border-radius: 50%;
     margin-right: auto;
         appearance: none;
+    @include desktop {
+        width: 26px;
+        height: 26px;
+        margin-top: 20px;
+    }
 }
 .checkbox-test__checkbox:checked {
-    background-color: red;
+    background-color: #d41443;
 }
 
 .checkbox-test__list1 {
     display: block;
+    @include tablet {
+        display: block;
+        @include fonts ($fw: 400, $fs: 8px, $lh: 12px);      
+        color: $colorFontSecondary;  
+        height: 56px;
+        width: 114px;
+    }
+    @include desktop {
+        display: block;
+        @include fonts ($fw: 400, $fs: 14px, $lh: 20px);      
+        color: $colorFontSecondary;  
+        height: 78px;
+        width: 200px;
+    }
 }
 .checkbox-test__list2 {
     display: none;
+    @include tablet {
+        @include fonts ($fw: 400, $fs: 8px, $lh: 12px);      
+        color: $colorFontSecondary;  
+
+        height: 56px;
+    }
+    @include desktop {
+        @include fonts ($fw: 400, $fs: 14px, $lh: 20px);      
+        color: $colorFontSecondary;  
+        height: 78px;
+        width: 600px;
+    }
 }
 
 .checkbox-test__checkbox:checked ~ .checkbox-test__list1 {

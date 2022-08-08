@@ -42,6 +42,11 @@
             padding-right: 32px;
             
         }
+        @include desktop {
+            padding-left: 16px;
+            padding-right: 16px;
+            
+        }
     }
 
     &-top {
@@ -228,7 +233,7 @@
     &__text {
         display: none;
         @include tablet {
-            display: block;
+            display: none;
             @include fonts ($fw: 400, $fs: 8px, $lh: 10px);      
             color: $colorFontSecondary;  
             margin-top: 61px;
@@ -236,7 +241,7 @@
             width: 114px;
         }
         @include desktop {
-            display: block;
+            display: none;
             @include fonts ($fw: 400, $fs: 14px, $lh: 14px);      
             color: $colorFontSecondary;  
             margin-top: 108px;
@@ -313,15 +318,19 @@
     &__arrow-right {
         display: none;
         @include tablet {
-            display: block;
+            display: flex;
             position: relative;
             transform-origin: 100%;
             transform: scale(-1, 1);
             fill: currentColor;
             width: 6px;
+            height: 6px;
         }
         @include desktop {
+            top: 115;
+            left: 0;
             width: 8px;
+            height: 8px;
             transform-origin: 105%;
         }
     }
