@@ -3,6 +3,12 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  @include tablet {
+    padding-top: 60px;
+  }
+  @include desktop {
+    padding: 0;
+  }
 }
 
 .customer-reviews__feedback-overlay {
@@ -13,10 +19,22 @@
   @include tablet {
     padding: 41px 55px 41px 51px;
   }
+
+  @include desktop {
+    padding: 32px 74px 31px 72px;
+  }
 }
 
 .customer-reviews__photo {
   margin-bottom: 32px;
+
+  @include tablet {
+    margin-bottom: 20px;
+  }
+
+  @include desktop {
+    margin-bottom: 16px;
+  }
 }
 
 .customer-reviews__feedback {
@@ -35,7 +53,7 @@
   );
 
   @include tablet {
-    width: 620px;
+    width: 609px;
     @include fonts($fs: 16px, $lh: 30px);
     background: repeating-linear-gradient(
       to bottom,
@@ -43,6 +61,10 @@
       transparent 27px,
       #e1e1e1 28px
     );
+  }
+
+  @include desktop {
+    width: 750px;
   }
 
   &::before {
@@ -62,7 +84,9 @@
     opacity: 0.5;
 
     @include tablet {
-      transform: translate(-45px, -15px);
+      top: 0;
+      left: 0;
+      transform: translate(-35px, -15px);
     }
   }
 
@@ -79,10 +103,22 @@
     background-image: url('/src/images/customer-reviews/Ellipse.svg');
     background-repeat: no-repeat;
     background-position: center;
+
+    @include tablet {
+      bottom: -49px;
+    }
   }
 }
 
 .customer-reviews__name {
   @include fonts($fs: 14px, $lh: 26px);
   color: $colorFontPrimary;
+
+  @include tablet {
+    @include fonts($fs: 16px, $lh: 30px);
+  }
+
+  @include desktop {
+    @include fonts($fs: 20px, $lh: 37px);
+  }
 }
