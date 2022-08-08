@@ -111,6 +111,9 @@
 }
 
 .customer-reviews__name {
+  display: block;
+  position: relative;
+
   @include fonts($fs: 14px, $lh: 26px);
   color: $colorFontPrimary;
 
@@ -120,5 +123,35 @@
 
   @include desktop {
     @include fonts($fs: 20px, $lh: 37px);
+  }
+}
+
+.swiper-pagination-bullet {
+  &.swiper-pagination-bullet-active {
+    background-color: transparent;
+    position: relative;
+    &::after {
+      position: absolute;
+      content: '';
+      top: 0;
+      left: 0;
+
+      transform: translate(-18%, -27%);
+
+      width: 12px;
+      height: 11px;
+
+      background-image: url('/src/images/customer-reviews/Home.svg');
+    }
+  }
+}
+
+.swiper-pagination {
+  &.swiper-pagination-clickable {
+    &.swiper-pagination-bullets {
+      &.swiper-pagination-horizontal {
+        position: static;
+      }
+    }
   }
 }
