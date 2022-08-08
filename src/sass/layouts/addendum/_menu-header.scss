@@ -333,6 +333,10 @@
         background-size: 35px;
         background-position: 370 45, 100 150, 400 350; 
     }
+    @include desktop {
+        background-size: 35px;
+        background-position: 355 45, 110 185, 355 400; 
+    }
     max-width: 450px;
     top: 50%;
     transform: translateY(-50%);
@@ -415,6 +419,11 @@
         &:focus,
         &:hover {
             box-shadow: 0px 1px 3px #D41443, 0px 1px 1px #D41443, 0px 2px 1px #D41443;
+            
+        }
+        &:focus + &__input-icon {
+            width: 20px;
+            height: 20px;
         }
     }
     &__input-icon {
@@ -427,8 +436,14 @@
         width: 18px;
         height: 18px;
         fill: $colorFontTertiary;
+        &:focus,
+        &:hover {
+            width: 20px;
+            height: 20px;   
+        }
     }
     &__textarea {
+        cursor: pointer;
         &--container {
             height: 85px;
             margin-bottom: 10px;
@@ -490,7 +505,9 @@
 }
 
 .checkbox-contanier {
+    cursor: pointer;
     &__checkbox {
+        cursor: pointer;
         margin-right: 5px;
         appearance: none;
         width: 20px;
@@ -513,6 +530,7 @@
         margin-bottom: 10px;
     }
     &__checkbox-label {
+        cursor: pointer;
         position: relative;
         display: inline-flex;
         align-items: center;
@@ -535,6 +553,12 @@
     &:hover,
     &:focus {
         color: $colorFontSecondary;
+    }
+    @include tablet {
+        @include fonts ($ff: 'Titan One', $ffs: normal, $fw: 700, $fs: 14px, $lh: 16px);        
+    }
+    @include desktop {
+        @include fonts ($ff: 'Titan One', $ffs: normal, $fw: 700, $fs: 16px, $lh: 18px);        
     }
 }
 
@@ -594,6 +618,7 @@
     content: "";
     left: 184px;
     bottom: 42px;
+    transition: 250ms;
     @include desktop {
         left: 229px;
         bottom: 84px;
@@ -601,6 +626,7 @@
 }
 
 .checkbox-test__checkbox {
+    cursor: pointer;
     pointer-events: auto;
     display: inline-flex;
     margin-top: 7px;
@@ -610,6 +636,7 @@
     border-radius: 50%;
     margin-right: auto;
         appearance: none;
+        transition: 250ms;
     @include desktop {
         width: 26px;
         height: 26px;
@@ -624,6 +651,7 @@
 .checkbox-test__list1 {
     pointer-events: none;
     display: block;
+    transition: 250ms;
     @include tablet {
         display: block;
         @include fonts ($fw: 400, $fs: 8px, $lh: 12px);      
@@ -640,6 +668,7 @@
     }
 }
 .checkbox-test__list2 {
+    transition: 250ms;
     pointer-events: none;
     display: none;
     @include tablet {
@@ -667,3 +696,8 @@
     fill: white;
 }
 
+.hero-form__input:focus ~ .hero-form__input-icon,
+.hero-form__input:hover ~ .hero-form__input-icon {
+    width: 20px;
+    height: 20px;
+}

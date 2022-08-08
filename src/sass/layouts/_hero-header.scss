@@ -12,6 +12,12 @@
         background-size: 171px 410px, 344px;
         background-position: 147 93, 66 83;
     }
+    @media screen and (min-width: 580px) {
+        background-image:url(../images/hero-header/hero-pic-320-2x-min.png),
+        url(../images/hero-header/Ellipse.png);
+        background-size: 171px 410px, 344px;
+        background-position: 147 93, 66px 83px;
+    }
     @include tablet {
         background-image:url(../images/hero-header/hero-pic-320-2x-min.png),
         url(../images/hero-header/baby-768-2x-min.png),
