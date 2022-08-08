@@ -529,6 +529,7 @@
         background-color: #ffb8ca;
         transition: 250ms;
         &:checked + .icon__check {
+            opacity: 1;
             background-image: url(../images/hero-header/ice-cream.svg);
             background-size: 16px 16px;
             background-repeat: no-repeat;
@@ -577,6 +578,7 @@
 }
 
 .icon__check {
+    opacity: 0;
     margin-right: 8px;
     position: absolute;
     content: "";
@@ -644,6 +646,7 @@
 .checkbox-test__checkbox {
     transition-duration: 250ms;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    color: white;
     cursor: pointer;
     pointer-events: auto;
     display: inline-flex;
@@ -668,20 +671,21 @@
 }
 
 .checkbox-test__list1 {
+    position: relative;
     transition-duration: 250ms;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
     pointer-events: none;
-    display: block;
+    opacity: 1;
     transition: 250ms;
     @include tablet {
-        display: block;
+        opacity: 1;
         @include fonts ($fw: 400, $fs: 8px, $lh: 12px);      
         color: $colorFontSecondary;  
         height: 48px;
         width: 114px;
     }
     @include desktop {
-        display: block;
+        opacity: 1;
         @include fonts ($fw: 400, $fs: 14px, $lh: 20px);      
         color: $colorFontSecondary;  
         height: 78px;
@@ -689,34 +693,46 @@
     }
 }
 .checkbox-test__list2 {
+    position: relative;
     transition-duration: 250ms;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
     pointer-events: none;
-    display: none;
+    opacity: 0;
     @include tablet {
         @include fonts ($fw: 400, $fs: 8px, $lh: 12px);      
         color: $colorFontSecondary;  
         height: 48px;
         width: 335px;
+        bottom: -48;
     }
     @include desktop {
         @include fonts ($fw: 400, $fs: 14px, $lh: 20px);      
         color: $colorFontSecondary;  
+        bottom: -78;
         height: 78px;
         width: 600px;
     }
 }
 
 .checkbox-test__checkbox:checked ~ .checkbox-test__list1 {
-    display: none;
+    opacity: 0;
     transition-duration: 250ms;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .checkbox-test__checkbox:checked ~ .checkbox-test__list2 {
-    display: block;
+    position: relative;
+    opacity: 1;
     transition-duration: 250ms;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    @include tablet {
+        bottom: -48;
+    }
+    @include desktop {
+        bottom: -78;
+    }
 }
+
+
 
 .checkbox-test__checkbox:checked ~ .hero__arrow-right {
     fill: white;
@@ -728,4 +744,8 @@
 .hero-form__input:hover ~ .hero-form__input-icon {
     width: 20px;
     height: 20px;
+}
+
+.checkbox-test__checkbox:hover ~ .hero__arrow-right {
+    color: black;
 }
