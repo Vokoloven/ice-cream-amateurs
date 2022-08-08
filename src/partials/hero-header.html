@@ -1,0 +1,172 @@
+
+<header class="header" id="header">
+  <div class="container header__container">
+    <div class="menu-container" data-menu>
+      <button class=" menu-container.is-open__button" type="button" data-modal-open>
+        Buy now
+        <svg class="header-top__btn-icon header-top__btn-icon-menu" width="8px" height="10px">
+            <use
+            href="./images/hero-header/symbol-defs.svg#icon-btn-arrow"
+            class="header-top__btn-icon"
+            ></use>
+        </svg>
+      </button>
+      <nav>
+        <ul class="menu-container__list">
+          <li class="menu-container__item">
+              <a href="#header" class="menu-container__link">Home</a>
+          </li>
+          <li class="menu-container__item">
+              <a href="#about" class="menu-container__link">About us</a>
+          </li>
+          <li class="menu-container__item">
+            <a href="#advantages" class="menu-container__link">How it’s made?</a>
+          </li>
+          <li class="menu-container__item">
+            <a href="#products" class="menu-container__link">Our products</a>
+          </li>
+          <li class="menu-container__item">
+              <a href="#contacts" class="menu-container__link">Contact</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+    <div class="header-top">
+          <img
+          src="./images/hero-header/Logo.svg"
+          alt="logo"
+          class="header-top__logo"
+          />
+      <button type="button" class="menu__button menu-header__button is-open" data-menu-button>
+          <svg class="menu__icon header-top__menu-open" aria-label="Переключатель мобильного меню">
+              <use class="icon__menu" href="./images/hero-header/symbol-defs.svg#icon-menu-close" class="menu__close--position menu__icon--animate"></use>
+              <use class="icon__close" href="./images/hero-header/symbol-defs.svg#icon-menu-open" class="menu__icon--animate"></use>
+          </svg>
+      </button>
+    </div>
+    <section class="hero">
+      <div class="hero__box-left">
+        <h1 class="hero__title">
+          ice cream made with <span class="hero__title--heavy">passion</span>
+        </h1>
+        <ul class="hero__list">
+          <li class="hero__item">
+            <a href="#products" class="hero__link hero__link--first">Products</a>
+          </li>
+          <li class="hero__item">
+            <a href="#advantages" class="hero__link hero__link--last"
+              >How it’s made?</a
+            >
+          </li>
+        </ul>
+        <p class="hero__text">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+          tempor incididunt ut labore et
+        </p>
+        <a class="hero__circle-right">
+          <svg class="hero__arrow-right">
+            <use
+              href="./images/hero-header/symbol-defs.svg#icon-arrow-left2"
+            ></use>
+          </svg>
+        </a>
+      </div>
+      <ul class="hero__listbox">
+        <li class="hero__point">
+          <span class="hero__number">16</span>
+          <p class="hero__info">cafes</p>
+        </li>
+        <li class="hero__point">
+          <span class="hero__number">23</span>
+          <p class="hero__info">food trucks</p>
+        </li>
+      </ul>
+    </section>
+  </div>
+  <div class="header-backdrop is-hidden" data-modal>
+    <div class="hero-modal">
+      <img
+      src="./images/hero-header/Logo.svg"
+      alt="logo"
+      class="header-top__logo header-top__logo--menu"
+      />
+      <form class="hero-form">
+        <div class="hero-form__item">
+          <label class="hero-form__label">
+            Name
+          </label>
+          <input type="text" class="hero-form__input" placeholder=" ">
+          <svg class="hero-form__input-icon">
+            <use href="./images/hero-header/symbol-defs-new.svg#icon-person-black"></use>
+          </svg>
+        </div>
+        <div class="hero-form__item">
+          <label class="hero-form__label">
+            Phone
+          </label>
+          <input type="text" class="hero-form__input" placeholder=" ">
+          <svg class="hero-form__input-icon">
+            <use href="./images/hero-header/symbol-defs-new.svg#icon-phone-black"></use>
+          </svg>
+        </div>
+        <div class="hero-form__item">
+          <label class="hero-form__label">
+            Email
+          </label>
+          <input type="text" class="hero-form__input" placeholder=" ">
+          <svg class="hero-form__input-icon">
+            <use href="./images/hero-header/symbol-defs-new.svg#icon-email-black"></use>
+          </svg>
+        </div>
+        <div class="hero-form__item hero-form__item--textarea">
+          <label class="hero-form__label">
+            Comments
+          </label>
+          <textarea name="textarea" class="hero-form__textarea" placeholder="Enter you text"></textarea>
+        </div>
+        <div class="checkbox-contanier">
+          <label class="checkbox-contanier__checkbox-label">
+            <input type="checkbox" class="checkbox-contanier__checkbox" name="topic">
+            <span class="icon__check"></span>
+            Соглашаюсь с рассылкой и принимаю
+            <a href="https://goit.ua/marathon/?utm_source=site&amp;utm_medium=mainsite&amp;utm_campaign=button" class="contract">Условия договора</a>
+          </label>
+        </div>
+        <button type="button" class="hero-form__button-send">SEND
+          <svg class="header-top__btn-icon header-top__btn-icon-menu" width="8px" height="10px">
+            <use
+            href="./images/hero-header/symbol-defs.svg#icon-btn-arrow"
+            class="header-top__btn-icon"
+            ></use>
+        </svg>
+        </button>
+      </form>
+      <button data-modal-close class="hero-modal__close">
+        <svg class="hero-modal__icon" width="14px" height=" 14px">
+          <use href="./images/hero-header/symbol-defs.svg#icon-menu-close"></use>
+      </svg>        
+      </button>
+    </div>
+  </div>
+  
+</header>
+<script src="./js/hero-modal.js"></script>
+<script src="./js/mobile-menu.js"></script>
+
+<!-- test -->
+
+<!-- <button type="button" class="menu__button menu-header__button is-open" data-menu-button>
+    <svg class="menu__icon header-top__menu-open" aria-label="Переключатель мобильного меню">
+        <use class="icon__menu" href="./images/hero-header/symbol-defs.svg#icon-menu-close" class="menu__close--position menu__icon--animate"></use>
+        <use class="icon__close" href="./images/hero-header/symbol-defs.svg#icon-menu-open" class="menu__icon--animate"></use>
+    </svg>
+</button>
+
+<a data-modal-open class="menu-header__button">
+    <svg class="header-top__menu-open">
+      <use href="./images/hero-header/symbol-defs.svg#icon-menu-open"></use>
+    </svg>
+  </a> -->
+  
+
+

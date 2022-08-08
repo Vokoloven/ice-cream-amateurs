@@ -1,5 +1,10 @@
 @mixin mobile {
-  @media screen and (min-width: 320px) {
+  @media screen and (min-width: 480px) {
+    @content;
+  }
+}
+@mixin big-mobile {
+  @media screen and (min-width: 480px) {
     @content;
   }
 }
@@ -43,6 +48,6 @@
 
 @mixin transition($tp: background-color, $td: 250ms, $tf: ease-in-out) {
   transition-property: $tp;
-  transition-delay: $td;
+  transition-duration: $td;
   transition-timing-function: $tf;
 }
