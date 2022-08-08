@@ -662,6 +662,13 @@
         height: 26px;
         margin-top: 20px;
     }
+    &:hover {
+        background-color: $colorFontTertiary;
+    }
+    &:hover ~ .hero__arrow-right {
+        fill: white;
+    }
+
 }
 .checkbox-test__checkbox:checked {
     transition-duration: 250ms;
