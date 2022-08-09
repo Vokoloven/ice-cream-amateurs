@@ -39,8 +39,9 @@
   display: flex;
   justify-content: center;
   align-items: center;
-
   gap: 2.5px;
+
+  cursor: pointer;
 
   @include tablet {
     gap: 6px;
