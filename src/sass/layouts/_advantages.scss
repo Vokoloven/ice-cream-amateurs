@@ -35,7 +35,7 @@
 
         @include tablet {
                 @include fonts($fw: 700, $fs: 14px, $lh: 24px);
-                max-width: 180px;
+                max-width: 280px;
             }
 
         @include desktop{
