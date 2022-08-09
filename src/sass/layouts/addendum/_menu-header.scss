@@ -142,9 +142,9 @@
         list-style: none;
         @include desktop {
             display: flex;
-            margin-top: 52px;
-            margin-left: 343px;
-            
+            position: absolute;
+            left: 343px;
+            top: 52px;
         }
     }
     &__button {
@@ -238,7 +238,7 @@
     align-items: center;
     width: 160px;
     height: 44px;
-    transition: 0ms;
+    transition: 250ms;
     @include fonts ($fw: 700, $fs: 16px, $lh: 21px);
     color: $colorFontTertiary;
     border: none;
@@ -252,7 +252,7 @@
         width: 186px;
         left: 50%;
         top: 58px;
-        transition: 0ms;
+        transition: 250ms;
     }
     @include desktop {
         left: 1009px;
@@ -260,6 +260,7 @@
         width: 159px;
         top: 40px;
         transition: none; 
+        transition: 250ms;
     }
     
     &:hover,
@@ -560,34 +561,35 @@
         @media screen and (max-width: 319px) {
             @include fonts ($ff: 'Titan One', $ffs: normal, $fw: 400, $fs: 7px, $lh: 9px);
         }
-        @include fonts ($ff: 'Titan One', $ffs: normal, $fw: 400, $fs: 9px, $lh: 11px);
+        @include fonts ($ff: 'Titan One', $ffs: normal, $fw: 400, $fs: 8px, $lh: 10px);
         color: $colorFontSecondary;
         @include tablet {
-            @include fonts ($ff: 'Titan One', $ffs: normal, $fw: 400, $fs: 12px, $lh: 14px);
+            @include fonts ($ff: 'Titan One', $ffs: normal, $fw: 400, $fs: 11px, $lh: 13px);
         }
-        @include tablet {
-            @include fonts ($ff: 'Titan One', $ffs: normal, $fw: 400, $fs: 14px, $lh: 16px);
+        @include desktop {
+            @include fonts ($ff: 'Titan One', $ffs: normal, $fw: 400, $fs: 11px, $lh: 13px);
         }
     }
+
 }
 
 .contract {
-    margin-left: 4px;
+    margin-left: 5px;
     color: $colorFontTertiary;
-    @include fonts ($ff: 'Titan One', $ffs: normal, $fw: 700, $fs: 10px, $lh: 12px);
+    @include fonts ($ff: 'Titan One', $ffs: normal, $fw: 700, $fs: 8px, $lh: 10px);
     transition: 250ms;
     &:hover,
     &:focus {
         color: $colorFontSecondary;
     }
-    @media screen and (max-width: 300px) {
-        @include fonts ($ff: 'Titan One', $ffs: normal, $fw: 700, $fs: 9px, $lh: 11px);    
+    @media screen and (max-width: 301px) {
+        @include fonts ($ff: 'Titan One', $ffs: normal, $fw: 700, $fs: 8px, $lh: 10px);    
     }
     @include tablet {
-        @include fonts ($ff: 'Titan One', $ffs: normal, $fw: 700, $fs: 14px, $lh: 16px);        
+        @include fonts ($ff: 'Titan One', $ffs: normal, $fw: 700, $fs: 13px, $lh: 15px);        
     }
     @include desktop {
-        @include fonts ($ff: 'Titan One', $ffs: normal, $fw: 700, $fs: 16px, $lh: 18px);        
+        @include fonts ($ff: 'Titan One', $ffs: normal, $fw: 700, $fs: 13px, $lh: 15px);        
     }
 }
 
@@ -780,14 +782,19 @@
 // }
 
 .list2__before {
+    display: block;
     transition: 250ms;
-    margin-left: 45px;
+    margin-left: 30px;
     margin-top: 3px;
     text-indent: 1.0em;
+    @include desktop {
+        margin-left: 50px;
+    }
 }
 .list2__after {
+    display: block;
     transition: 250ms;
-    margin-left: 75;
+    margin-left: 50px;
     margin-top: 3px;
     text-indent: 1.0em;
 }

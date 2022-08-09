@@ -211,6 +211,7 @@
         display: flex;
         background-color: $colorFontTertiary;
         border-radius: 20px;
+        transition: 250ms;
 
         &:nth-child(1) {
             margin-right: 8px;
@@ -232,13 +233,25 @@
         transition: 250ms;
         
         &--first {
+            transition: 250ms;
+            transition-timing-function: ease-in-out;
             width: 62.4px;
             height: 24px;
+            @include desktop {
+                width: 107px;
+                height: 40px;
+                @include fonts ($fw: 400, $fs: 15px, $lh: 18px);
+            }
         }
 
         &--last {
             width: 82.8px;
             height: 24px;
+            @include desktop {
+                width: 138px;
+                height: 40px;
+                @include fonts ($fw: 400, $fs: 15px, $lh: 18px);
+            }
         }
 
         &:hover,
@@ -277,6 +290,9 @@
         }
         list-style: none;
         margin-left: auto;
+        @include desktop {
+            padding-right: 18px;
+        }
     }
 
     &__point {
@@ -287,7 +303,16 @@
         position: relative;
         z-index: 1;
         @include fonts ($ff: 'Titan One', $ffs: normal, $fw: 400, $fs: 28px, $lh: 32px);
+        @media screen and (max-width: 767px) {
+            @include fonts ($ff: 'Titan One', $ffs: normal, $fw: 400, $fs: 36px, $lh: 53px);    
+        }
+        @include desktop {
+            @include fonts ($ff: 'Titan One', $ffs: normal, $fw: 400, $fs: 46px, $lh: 53px);
+        }
         color: $colorFontTertiary;
+        @include desktop {
+            @include fonts ($ff: 'Titan One', $ffs: normal, $fw: 400, $fs: 46px, $lh: 53px);
+        }
 
         &::after {
             content: "";
@@ -299,6 +324,16 @@
             right: -10px;
             border-radius: 50%;
             background-color: $colorFontSecondary;
+            @media screen and (max-width: 767px) {
+                width: 26px;
+                height: 26px;
+                right: -18px;                
+            }
+            @include desktop {
+                width: 30px;
+                height: 30px;
+                right: -18px;
+            }
         }
     }
 
@@ -358,3 +393,6 @@
     }
 }
 
+.checkbox-contanier__checkbox-label {
+    display: none;
+}
