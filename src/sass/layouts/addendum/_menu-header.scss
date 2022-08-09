@@ -117,6 +117,7 @@
         transition-timing-function: ease-in-out;    
     }
     &.is-open {
+        overflow: hidden;
         pointer-events: all;
         padding-top: 122px;
         transform: translateX(0);
