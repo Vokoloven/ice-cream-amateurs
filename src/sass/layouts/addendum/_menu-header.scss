@@ -556,8 +556,10 @@
         position: relative;
         display: inline-flex;
         align-items: center;
-        
-        @include fonts ($ff: 'Titan One', $ffs: normal, $fw: 400, $fs: 10px, $lh: 12px);
+        @media screen and (max-width: 319px) {
+            @include fonts ($ff: 'Titan One', $ffs: normal, $fw: 400, $fs: 7px, $lh: 9px);
+        }
+        @include fonts ($ff: 'Titan One', $ffs: normal, $fw: 400, $fs: 9px, $lh: 11px);
         color: $colorFontSecondary;
         @include tablet {
             @include fonts ($ff: 'Titan One', $ffs: normal, $fw: 400, $fs: 12px, $lh: 14px);
@@ -576,6 +578,9 @@
     &:hover,
     &:focus {
         color: $colorFontSecondary;
+    }
+    @media screen and (max-width: 300px) {
+        @include fonts ($ff: 'Titan One', $ffs: normal, $fw: 700, $fs: 9px, $lh: 11px);    
     }
     @include tablet {
         @include fonts ($ff: 'Titan One', $ffs: normal, $fw: 700, $fs: 14px, $lh: 16px);        
@@ -742,6 +747,7 @@
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .checkbox-test__checkbox:checked ~ .checkbox-test__list2 {
+    text-indent: 1.0em;
     position: relative;
     opacity: 1;
     transition-duration: 250ms;
@@ -771,3 +777,16 @@
 // .checkbox-test__checkbox:hover ~ .hero__arrow-right {
 //     color: black;
 // }
+
+.list2__before {
+    transition: 250ms;
+    margin-left: 45px;
+    margin-top: 3px;
+    text-indent: 1.0em;
+}
+.list2__after {
+    transition: 250ms;
+    margin-left: 75;
+    margin-top: 3px;
+    text-indent: 1.0em;
+}
