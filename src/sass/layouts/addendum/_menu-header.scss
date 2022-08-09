@@ -556,7 +556,9 @@
         position: relative;
         display: inline-flex;
         align-items: center;
-        
+        @media screen and (max-width: 319px) {
+            @include fonts ($ff: 'Titan One', $ffs: normal, $fw: 400, $fs: 7px, $lh: 9px);
+        }
         @include fonts ($ff: 'Titan One', $ffs: normal, $fw: 400, $fs: 10px, $lh: 12px);
         color: $colorFontSecondary;
         @include tablet {
