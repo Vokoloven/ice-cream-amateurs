@@ -85,7 +85,7 @@
         }
         &__menu-open {
             overflow: hidden;
-            position: fixed;
+            // position: fixed;
             z-index: 13;
             margin-left: auto;
             color: $colorFontTertiary;
@@ -352,3 +352,8 @@
     }
 }
 
+.menu-icon {
+    @media screen and (max-width: 767px) {
+        position: absolute;
+    }
+}
