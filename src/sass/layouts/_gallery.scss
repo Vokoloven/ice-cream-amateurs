@@ -51,6 +51,22 @@
   }
 }
 
+.gallery__box-mansory {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  gap: 2.5px;
+
+  @include tablet {
+    gap: 6px;
+  }
+
+  @include desktop {
+    gap: 8px;
+  }
+}
+
 .gallery__items {
   display: flex;
   flex-direction: column;
