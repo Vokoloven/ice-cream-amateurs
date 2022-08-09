@@ -1,5 +1,6 @@
 .about {
-    background-color: $colorBackgroundTertiary;
+    background-color: $colorBackgroundTertiary;}
+    .about__images{
 background-image: url("../images/about/fon-milk-280-min.png");
         background-repeat: no-repeat;
         background-position-y: 70%;
@@ -20,12 +21,16 @@ background-image: url("../images/about/fon-milk-280-min.png");
             background-image: url("../images/about/fon-milk-1200-min.png");
             background-repeat: no-repeat;
             background-size: contain;
-    
+            background-position: center;
+           
+        
+
             @media (min-device-pixel-ratio: 2),
             (min-resolution: 192dpi),
             (min-resolution: 2dppx) {
                 background-image: url("../images/about/fon-milk-1200@2x-min.png");
-                background-size: contain;
+            background-size: contain;
+            background-position: center;
             }
                     }}
 
