@@ -84,6 +84,9 @@
             }
         }
         &__menu-open {
+            overflow: hidden;
+            position: fixed;
+            z-index: 13;
             margin-left: auto;
             color: $colorFontTertiary;
             width: 20px;
