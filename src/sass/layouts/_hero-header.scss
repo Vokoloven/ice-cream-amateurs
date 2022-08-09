@@ -85,13 +85,19 @@
         }
         &__menu-open {
             overflow: hidden;
-            position: fixed;
+            // position: fixed;
             z-index: 13;
             margin-left: auto;
             color: $colorFontTertiary;
             width: 20px;
             height: 14px;
             transition: 250ms;
+            @media screen and (max-width: 767px) {
+                overflow: auto;
+                position: fixed;
+                top: 20px;
+                right: 20.1px;
+            }
 
             &:hover,
             &:focus {
