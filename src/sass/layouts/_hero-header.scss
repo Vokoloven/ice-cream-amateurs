@@ -92,6 +92,12 @@
             width: 20px;
             height: 14px;
             transition: 250ms;
+            @media screen and (max-width: 767px) {
+                overflow: auto;
+                position: fixed;
+                top: 20px;
+                right: 20px;
+            }
 
             &:hover,
             &:focus {
@@ -352,8 +358,3 @@
     }
 }
 
-.menu-icon {
-    @media screen and (max-width: 767px) {
-        position: absolute;
-    }
-}
