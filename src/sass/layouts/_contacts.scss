@@ -273,10 +273,10 @@
 }
 
 .contacts__button-icon {
-  fill: #d41443;
+  fill: $colorFontTertiary;
   transition: fill 250ms linear;
   &:hover,
   &:focus {
-  fill: pink;
+  fill: $colorBackgroundPrimary
   }
 }
