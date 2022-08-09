@@ -222,7 +222,7 @@
   pointer-events: none;
   visibility: hidden;
 
-  &>.contacts__modal {
+  & > .contacts__modal {
       transform: translate(-50%, -50%);
     }
 }
