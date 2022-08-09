@@ -39,7 +39,7 @@
           class="header-top__logo"
           />
         </a>
-      <button type="button" class="menu__button menu-header__button is-open" data-menu-button>
+      <button type="button" class="menu__button menu-header__button is-open" aria-label="open-mobile-menu" data-menu-button>
           <svg class="menu__icon header-top__menu-open" aria-label="Переключатель мобильного меню">
               <use class="icon__menu" href="./images/hero-header/symbol-defs.svg#icon-menu-close" class="menu__close--position menu__icon--animate"></use>
               <use class="icon__close" href="./images/hero-header/symbol-defs.svg#icon-menu-open" class="menu__icon--animate"></use>
@@ -61,17 +61,6 @@
             >
           </li>
         </ul>
-        <!-- <p class="hero__text">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-          tempor incididunt ut labore et
-        </p>
-        <a class="hero__circle-right">
-          <svg class="hero__arrow-right">
-            <use
-              href="./images/hero-header/symbol-defs.svg#icon-arrow-left2"
-            ></use>
-          </svg>
-        </a> -->
       </div>
       <ul class="hero__listbox">
         <li class="hero__point">
@@ -84,13 +73,15 @@
         </li>
       </ul>
       <label class="checkbox-test">
-        <input type="checkbox" class="checkbox-test__checkbox">
+        <input type="checkbox" class="checkbox-test__checkbox" aria-label="open-hero-information">
 
         <span class="checkbox-test__list1">
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
         </span>
         <span class="checkbox-test__list2">
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloremque cumque officiis adipisci porro, esse eaque fuga nemo velit! Pariatur vero molestias quia sed, a est id dignissimos aliquam reiciendis sunt consequuntur labore minus ad dolorum voluptatum eos autem excepturi
+          <div>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloremque cumque officiis adipisci porro, esse eaque fuga nemo velit! Pariatur vero molestias quia sed, a est id dignissimos aliquam reiciendis sunt consequuntur labore minus ad dolorum voluptatum eos autem excepturi.</div>
+          <div class="list2__before">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos ab est sint, quam itaque libero et sed minus ullam iste soluta asperiores deserunt distinctio, consectetur error rerum.</div>
+          <div class="list2__after">Lorem ipsum dolor sit, amet consectetur adipisicing elit.</div>
         </span>
         <svg class="hero__arrow-right">
           <use
@@ -104,10 +95,10 @@
     <div class="hero-modal">
       <img
       src="./images/hero-header/Logo.svg"
-      alt="logo"
+      alt="modal-logo"
       class="header-top__logo header-top__logo--menu"
       />
-      <form class="hero-form">
+      <form class="hero-form" aria-label="site-form">
         <div class="hero-form__item">
           <label class="hero-form__label" for="name">
             Name
@@ -146,10 +137,10 @@
             <input type="checkbox" class="checkbox-contanier__checkbox" name="topic">
             <span class="icon__check"></span>
             Соглашаюсь с рассылкой и принимаю
-            <a href="https://goit.ua/marathon/?utm_source=site&amp;utm_medium=mainsite&amp;utm_campaign=button" class="contract">Условия договора</a>
+            <a href="https://github.com/Vokoloven/ice-cream-amateurs" class="contract" rel="nofollow noopener noreferrer">Условия договора</a>
           </label>
         </div>
-        <button type="submit" class="hero-form__button-send">SEND
+        <button type="submit" class="hero-form__button-send" aria-label="submit-form">SEND
           <svg class="header-top__btn-icon header-top__btn-icon-menu" width="8px" height="10px">
             <use
             href="./images/hero-header/symbol-defs.svg#icon-btn-arrow"
@@ -158,7 +149,7 @@
         </svg>
         </button>
       </form>
-      <button data-modal-close class="hero-modal__close">
+      <button aria-label="close modal window" data-modal-close class="hero-modal__close">
         <svg class="hero-modal__icon" width="14px" height=" 14px">
           <use href="./images/hero-header/symbol-defs.svg#icon-menu-close"></use>
       </svg>        
@@ -170,3 +161,4 @@
 </header>
 <script src="./js/hero-modal.js"></script>
 <script src="./js/mobile-menu.js"></script>
+
