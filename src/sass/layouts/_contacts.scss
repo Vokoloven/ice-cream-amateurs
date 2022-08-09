@@ -205,21 +205,23 @@
 /* Модальное окно */
 
 .contacts__backdrop {
+  z-index: 9;
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: transparent;
+  background-color: rgba(0, 0, 0, 0.2);
 
   opacity: 1;
-  transition: opacity 250ms linear, visibility 250ms linear;
+  transition: opacity 250ms linear, visibility 250ms linear, scale 250ms linear;
 }
 
 .is-hidden {
   opacity: 0;
   pointer-events: none;
   visibility: hidden;
+  transform: scale(0.5);
 }
 
 .contacts__modal {
@@ -228,7 +230,7 @@
   top: 50%;
   left: 50%;
   
-  transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%) scale(1);
   
   max-width: 100%;
   min-height: 530px;
@@ -270,3 +272,14 @@
   
   transform: translate(-50%, -50%);
 }
+
+.contacts__button-icon {
+  fill: $colorFontTertiary;
+  transition: fill 250ms linear;
+  &:hover,
+  &:focus {
+  fill: $colorBackgroundPrimary
+  }
+}
+
+
