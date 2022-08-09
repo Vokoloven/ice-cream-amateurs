@@ -90,7 +90,7 @@
 .menu-container {
     box-sizing: border-box;
     padding-top: 60px;
-    z-index: 10;
+    z-index: 11;
     position: absolute;
     content: "";
     right: 0;
@@ -117,6 +117,7 @@
         transition-timing-function: ease-in-out;    
     }
     &.is-open {
+        overflow: hidden;
         pointer-events: all;
         padding-top: 122px;
         transform: translateX(0);
