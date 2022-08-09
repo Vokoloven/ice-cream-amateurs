@@ -322,20 +322,22 @@
         }
     }
     &__arrow-right {
+        transition: 250ms;
+        transition-timing-function: ease-in-out;
         display: none;
         @include tablet {
             display: flex;
             position: relative;
             transform-origin: 100%;
             transform: scale(-1, 1);
-            fill: currentColor;
+            fill: $colorFontTertiary;
             width: 6px;
             height: 6px;
-            top: 67;
+            top: 115;
             left: 0;
         }
         @include desktop {
-            top: 115;
+            top: 193;
             left: 0;
             width: 8px;
             height: 8px;

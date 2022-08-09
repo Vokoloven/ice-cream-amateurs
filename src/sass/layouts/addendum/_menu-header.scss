@@ -66,7 +66,7 @@
 .menu__button {
     @include tablet {    
         // background-color: red;
-        position: absolute;
+        position: fixed;
         right: 32px;
         top: 20px;
     }
@@ -79,6 +79,12 @@
             background-color: transparent;
         }
     }
+}
+
+.icon__close {
+    position: absolute;
+    content: "";
+
 }
 
 .menu-container {
@@ -96,7 +102,11 @@
     transition-timing-function: ease-in-out;
     // display: none;
     background-color: $colorBackgroundModalSecondary;
+    @include tablet {
+        pointer-events: none;
+    }
     @include desktop {
+        pointer-events: all;
         display: flex;
         position: absolute;
         height: max-content;
@@ -107,10 +117,12 @@
         transition-timing-function: ease-in-out;    
     }
     &.is-open {
+        pointer-events: all;
         padding-top: 122px;
         transform: translateX(0);
         filter: drop-shadow(-8px 0px 20px rgba(0, 0, 0, 0.25));
         opacity: 1;
+        position: fixed;
         display: block;
         width: 100%;
         height: 100%;
@@ -135,6 +147,7 @@
         }
     }
     &__button {
+        pointer-events: all;
         @include fonts ($fw: 700, $fs: 16px, $lh: 21px);
         color: $colorFontTertiary;
         margin-left: auto;
@@ -201,6 +214,7 @@
 }
 
 .menu-header__button {
+    pointer-events: all;
     height: 14px;
     padding: 0px;
     margin-top: 19px;
@@ -210,6 +224,7 @@
 }
 
 .menu-container button {
+    pointer-events: all;
     position: absolute;
     content: "";
     left: -32px;
@@ -289,6 +304,8 @@
     width: 100%;
     height: 100%;
     background-color: #754a543b;
+    transition: 250ms;
+    transition-timing-function: ease-in-out;
     &.is-hidden {
         opacity: 0;
         pointer-events: none;
@@ -410,6 +427,8 @@
         color: $colorFontTertiary;     
         cursor: pointer;
         background-color: $colorBackgroundPrimary;
+        transition-duration: 250ms;
+        transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
         @include tablet {
             height: 30px;
         }
@@ -495,7 +514,8 @@
         color: $colorFontTertiary;
         border-radius: 22px;
         border: none;
-        transition: 250ms;
+        transition-duration: 250ms;
+        transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
         &:hover,
         &:focus {
             background-color: $colorFontTertiary;
@@ -517,11 +537,13 @@
         background-color: #ffb8ca;
         transition: 250ms;
         &:checked + .icon__check {
+            opacity: 1;
             background-image: url(../images/hero-header/ice-cream.svg);
             background-size: 16px 16px;
             background-repeat: no-repeat;
             // background-color: white;
             margin-right: 8px;
+            transition: 250ms;
         }
     }
     text-align: center;
@@ -534,6 +556,7 @@
         position: relative;
         display: inline-flex;
         align-items: center;
+        
         @include fonts ($ff: 'Titan One', $ffs: normal, $fw: 400, $fs: 10px, $lh: 12px);
         color: $colorFontSecondary;
         @include tablet {
@@ -563,6 +586,7 @@
 }
 
 .icon__check {
+    opacity: 0;
     margin-right: 8px;
     position: absolute;
     content: "";
@@ -607,6 +631,8 @@
 // }
 
 .checkbox-test {
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
     @media screen and (max-width: 767px) {
         display: none;
     }
@@ -626,6 +652,9 @@
 }
 
 .checkbox-test__checkbox {
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    color: white;
     cursor: pointer;
     pointer-events: auto;
     display: inline-flex;
@@ -636,31 +665,42 @@
     border-radius: 50%;
     margin-right: auto;
         appearance: none;
-        transition: 250ms;
     @include desktop {
         width: 26px;
         height: 26px;
         margin-top: 20px;
     }
+    &:hover {
+        background-color: $colorFontTertiary;
+    }
+    &:hover ~ .hero__arrow-right {
+        fill: white;
+    }
+
 }
 .checkbox-test__checkbox:checked {
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
     background-color: #d41443;
     color: white;
 }
 
 .checkbox-test__list1 {
+    position: relative;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
     pointer-events: none;
-    display: block;
+    opacity: 1;
     transition: 250ms;
     @include tablet {
-        display: block;
+        opacity: 1;
         @include fonts ($fw: 400, $fs: 8px, $lh: 12px);      
         color: $colorFontSecondary;  
         height: 48px;
         width: 114px;
     }
     @include desktop {
-        display: block;
+        opacity: 1;
         @include fonts ($fw: 400, $fs: 14px, $lh: 20px);      
         color: $colorFontSecondary;  
         height: 78px;
@@ -668,32 +708,58 @@
     }
 }
 .checkbox-test__list2 {
-    transition: 250ms;
+    position: relative;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
     pointer-events: none;
-    display: none;
+    opacity: 0;
     @include tablet {
         @include fonts ($fw: 400, $fs: 8px, $lh: 12px);      
         color: $colorFontSecondary;  
         height: 48px;
         width: 335px;
+        bottom: -48;
     }
     @include desktop {
         @include fonts ($fw: 400, $fs: 14px, $lh: 20px);      
         color: $colorFontSecondary;  
+        bottom: -78;
         height: 78px;
         width: 600px;
     }
 }
 
+// .checkbox-test__checkbox {
+//     &:hover,
+//     &:focus {
+//         background-color: #D41443;
+//     }
+// }
+
 .checkbox-test__checkbox:checked ~ .checkbox-test__list1 {
-    display: none;
+    opacity: 0;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .checkbox-test__checkbox:checked ~ .checkbox-test__list2 {
-    display: block;
+    position: relative;
+    opacity: 1;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    @include tablet {
+        bottom: -48;
+    }
+    @include desktop {
+        bottom: -78;
+    }
 }
+
+
 
 .checkbox-test__checkbox:checked ~ .hero__arrow-right {
     fill: white;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .hero-form__input:focus ~ .hero-form__input-icon,
@@ -701,3 +767,7 @@
     width: 20px;
     height: 20px;
 }
+
+// .checkbox-test__checkbox:hover ~ .hero__arrow-right {
+//     color: black;
+// }
