@@ -3,38 +3,66 @@
     position: relative;
     overflow: hidden;
     height: 502px;
-    background-image:url(../images/hero-header/hero-pic-320-2x-min.png),
+    background-image:url(../images/hero-header/hero-pic-320-1x-min.png),
      url(../images/hero-header/Ellipse.png);
     background-size: 171px 410px, 344px;
     background-repeat: no-repeat;
     background-position: 117 93, 36 83;
+    @media (min-device-pixel-ratio: 2),
+      (min-resolution: 192dpi),
+      (min-resolution: 2dppx) {
+        background-image:url(../images/hero-header/hero-pic-320-2x-min.png),
+        url(../images/hero-header/Ellipse.png);
+    }
     @include mobile {
         background-size: 171px 410px, 344px;
         background-position: 147 93, 66 83;
     }
     @media screen and (min-width: 580px) {
-        background-image:url(../images/hero-header/hero-pic-320-2x-min.png),
+        background-image:url(../images/hero-header/hero-pic-320-1x-min.png),
         url(../images/hero-header/Ellipse.png);
         background-size: 171px 410px, 344px;
         background-position: 147 93, 66px 83px;
+        @media (min-device-pixel-ratio: 2),
+        (min-resolution: 192dpi),
+        (min-resolution: 2dppx) {
+          background-image:url(../images/hero-header/hero-pic-320-2x-min.png),
+          url(../images/hero-header/Ellipse.png);
+      }
     }
     @include tablet {
-        background-image:url(../images/hero-header/hero-pic-320-2x-min.png),
-        url(../images/hero-header/baby-768-2x-min.png),
-        url(../images/hero-header/milk-768-2x-min.png),
+        background-image:url(../images/hero-header/hero-768-1x-min.png),
+        url(../images/hero-header/baby-768-1x-min.png),
+        url(../images/hero-header/milk-768-1x-min.png),
         url(../images/hero-header/Ellipse.png);
         background-size: 143px 336px, 190px 150px, 152px 154px, 344px;
         background-position: 322 80, 526 265, 32 246, 248 43;        
         height: 416px;
+        @media (min-device-pixel-ratio: 2),
+        (min-resolution: 192dpi),
+        (min-resolution: 2dppx) {
+            background-image:url(../images/hero-header/hero-768-2x-min.png),
+            url(../images/hero-header/baby-768-2x-min.png),
+            url(../images/hero-header/milk-768-2x-min.png),
+            url(../images/hero-header/Ellipse.png);
+      }
     }
     @include desktop {
-        background-image:url(../images/hero-header/hero-1200-2x-min.png),
-        url(../images/hero-header/baby-1200-2x-min.png),
-        url(../images/hero-header/milk-1200-2x-min.png),
+        background-image:url(../images/hero-header/hero-1200-1x-min.png),
+        url(../images/hero-header/baby-1200-1x-min.png),
+        url(../images/hero-header/milk-1200-1x-min.png),
         url(../images/hero-header/Ellipse.png);
         background-size: 236px 557px, 304px 241px, 213px 215px, 534px;
         background-position: 636 108, 880 423, 16 388, 517 54;        
         height: 664px;
+        @media (min-device-pixel-ratio: 2),
+        (min-resolution: 192dpi),
+        (min-resolution: 2dppx) {
+            background-image:url(../images/hero-header/hero-1200-2x-min.png),
+            url(../images/hero-header/baby-1200-2x-min.png),
+            url(../images/hero-header/milk-1200-2x-min.png),
+            url(../images/hero-header/Ellipse.png);
+      }
     }
 
 }
