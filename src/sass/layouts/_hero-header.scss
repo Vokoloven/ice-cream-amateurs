@@ -424,3 +424,19 @@
 .checkbox-contanier__checkbox-label {
     display: none;
 }
+
+.menu__button {
+    @media screen and (max-width: 767px) {
+        background-color: red;
+    }
+}
+
+// .header-top
+
+.header-top > .is-open > svg {
+    @media screen and (max-width: 767px) {
+        position: absolute;
+        top: -7px;
+        right: -287px;
+    }
+}
